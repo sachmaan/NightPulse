@@ -73,8 +73,6 @@
 		03D3D3A814254AE4008916BC /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D3D39014254AE4008916BC /* ASIInputStream.m */; };
 		03D3D3A914254AE4008916BC /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D3D39214254AE4008916BC /* ASINetworkQueue.m */; };
 		03D3D3AA14254AE4008916BC /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D3D39714254AE4008916BC /* Reachability.m */; };
-		03D3D3AB14254AE4008916BC /* FLImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D3D39B14254AE4008916BC /* FLImageView.m */; };
-		03D3D3AC14254AE4008916BC /* FullyLoaded.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D3D39D14254AE4008916BC /* FullyLoaded.m */; };
 		03D3D3AD14254AE4008916BC /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D3D3A114254AE4008916BC /* JSONKit.m */; };
 		03D3D3AF14254EBE008916BC /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D3D3AE14254EBE008916BC /* CFNetwork.framework */; };
 		03D3D3B114254ECE008916BC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D3D3B014254ECE008916BC /* SystemConfiguration.framework */; };
@@ -196,11 +194,6 @@
 		03D3D39314254AE4008916BC /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
 		03D3D39614254AE4008916BC /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		03D3D39714254AE4008916BC /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = Reachability.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		03D3D39A14254AE4008916BC /* FLImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FLImageView.h; sourceTree = "<group>"; };
-		03D3D39B14254AE4008916BC /* FLImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FLImageView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		03D3D39C14254AE4008916BC /* FullyLoaded.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FullyLoaded.h; sourceTree = "<group>"; };
-		03D3D39D14254AE4008916BC /* FullyLoaded.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = FullyLoaded.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		03D3D39E14254AE4008916BC /* SynthesizeSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SynthesizeSingleton.h; sourceTree = "<group>"; };
 		03D3D3A014254AE4008916BC /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		03D3D3A114254AE4008916BC /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		03D3D3AE14254EBE008916BC /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -483,7 +476,6 @@
 			isa = PBXGroup;
 			children = (
 				03D3D37E14254AE4008916BC /* asihttprequest */,
-				03D3D39814254AE4008916BC /* fully-loaded */,
 				03D3D39F14254AE4008916BC /* jsonkit */,
 			);
 			path = morsels;
@@ -540,26 +532,6 @@
 				03D3D39714254AE4008916BC /* Reachability.m */,
 			);
 			path = Reachability;
-			sourceTree = "<group>";
-		};
-		03D3D39814254AE4008916BC /* fully-loaded */ = {
-			isa = PBXGroup;
-			children = (
-				03D3D39914254AE4008916BC /* Classes */,
-			);
-			path = "fully-loaded";
-			sourceTree = "<group>";
-		};
-		03D3D39914254AE4008916BC /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				03D3D39A14254AE4008916BC /* FLImageView.h */,
-				03D3D39B14254AE4008916BC /* FLImageView.m */,
-				03D3D39C14254AE4008916BC /* FullyLoaded.h */,
-				03D3D39D14254AE4008916BC /* FullyLoaded.m */,
-				03D3D39E14254AE4008916BC /* SynthesizeSingleton.h */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		03D3D39F14254AE4008916BC /* jsonkit */ = {
@@ -714,8 +686,6 @@
 				03D3D3A814254AE4008916BC /* ASIInputStream.m in Sources */,
 				03D3D3A914254AE4008916BC /* ASINetworkQueue.m in Sources */,
 				03D3D3AA14254AE4008916BC /* Reachability.m in Sources */,
-				03D3D3AB14254AE4008916BC /* FLImageView.m in Sources */,
-				03D3D3AC14254AE4008916BC /* FullyLoaded.m in Sources */,
 				03D3D3AD14254AE4008916BC /* JSONKit.m in Sources */,
 				03C3344314298B5900E5E2AB /* FourSquareVenueSearchOperation.m in Sources */,
 				03C3344C142AB9AC00E5E2AB /* PulseModel.xcdatamodeld in Sources */,
