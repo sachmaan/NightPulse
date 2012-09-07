@@ -9,9 +9,20 @@
 	<key>CFBundleExecutable</key>
 	<string>NightPulse</string>
 	<key>CFBundleIconFile</key>
-	<string>icon_57.png</string>
+	<string>nightpulse_icon_57.png</string>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>nightpulse_icon_57.png</string>
+				<string>nightpulse_icon_114.png</string>
+			</array>
+		</dict>
+	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>com.sachindustries.nightpulse</string>
+	<string>Neroh</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -19,7 +30,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>0.1</string>
+	<string>0.2</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>

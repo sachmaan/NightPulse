@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 
-@interface NightPulseAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate>
+@interface NightPulseAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate, UINavigationControllerDelegate>
 
 @property(nonatomic, retain) IBOutlet UIWindow *window;
 
+// views for root controller
 @property(nonatomic, retain) IBOutlet UITabBarController *tabBarController;
+@property(nonatomic, retain) IBOutlet UINavigationController * navController;
 
 @property(nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 

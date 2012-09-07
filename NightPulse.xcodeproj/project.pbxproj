@@ -78,6 +78,25 @@
 		03D3D3B114254ECE008916BC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D3D3B014254ECE008916BC /* SystemConfiguration.framework */; };
 		03D3D3B314254ED5008916BC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D3D3B214254ED5008916BC /* MobileCoreServices.framework */; };
 		03DB2AA414451E3A00C234A5 /* LocationFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DB2AA314451E3A00C234A5 /* LocationFinder.m */; };
+		9E10B58315EF578100CC001F /* POIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10B58115EF578100CC001F /* POIViewController.m */; };
+		9E10B58415EF578100CC001F /* POIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E10B58215EF578100CC001F /* POIViewController.xib */; };
+		9E10B59715EF5C5200CC001F /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10B59615EF5C5000CC001F /* EGORefreshTableHeaderView.m */; };
+		9E10B59915EF5DAC00CC001F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E10B59815EF5DAC00CC001F /* QuartzCore.framework */; };
+		9E10B65B15F0118C00CC001F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E10B65A15F0118B00CC001F /* MapKit.framework */; };
+		9E10B65D15F019A100CC001F /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E10B65C15F019A100CC001F /* location.png */; };
+		9E10B66015F01AE000CC001F /* Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10B65F15F01AE000CC001F /* Annotation.m */; };
+		9E10B66415F01E3800CC001F /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10B66215F01E3600CC001F /* CameraViewController.m */; };
+		9E10B66515F01E3800CC001F /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E10B66315F01E3700CC001F /* CameraViewController.xib */; };
+		9E10B66815F01EB500CC001F /* CaptureSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10B66715F01EB400CC001F /* CaptureSessionManager.m */; };
+		9E6EAB7415F0230000B630B5 /* btn_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAB7315F0230000B630B5 /* btn_camera.png */; };
+		9E6EAB7715F026DD00B630B5 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6EAB7615F026DD00B630B5 /* CoreVideo.framework */; };
+		9E6EAB7915F026E000B630B5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6EAB7815F026E000B630B5 /* CoreMedia.framework */; };
+		9E6EAB7B15F0277900B630B5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6EAB7A15F0277900B630B5 /* AVFoundation.framework */; };
+		9E6EAB7C15F027BE00B630B5 /* CaptureSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10B66715F01EB400CC001F /* CaptureSessionManager.m */; };
+		9E6EAB7E15F027ED00B630B5 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6EAB7D15F027ED00B630B5 /* ImageIO.framework */; };
+		9E6EAB8015F0294A00B630B5 /* cwsf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAB7F15F0294A00B630B5 /* cwsf.jpg */; };
+		9E6EAB8215F02B3D00B630B5 /* nightpulse_icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAB8115F02B3D00B630B5 /* nightpulse_icon_57.png */; };
+		9E6EAB8415F02B4600B630B5 /* nightpulse_icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAB8315F02B4600B630B5 /* nightpulse_icon_114.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -200,6 +219,29 @@
 		03D3D3B014254ECE008916BC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		03D3D3B214254ED5008916BC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		03DB2AA314451E3A00C234A5 /* LocationFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationFinder.m; sourceTree = "<group>"; };
+		9E10B58015EF578100CC001F /* POIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POIViewController.h; sourceTree = "<group>"; };
+		9E10B58115EF578100CC001F /* POIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POIViewController.m; sourceTree = "<group>"; };
+		9E10B58215EF578100CC001F /* POIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = POIViewController.xib; sourceTree = "<group>"; };
+		9E10B59515EF5C5000CC001F /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		9E10B59615EF5C5000CC001F /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		9E10B59815EF5DAC00CC001F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9E10B65A15F0118B00CC001F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9E10B65C15F019A100CC001F /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = location.png; path = "../../../../Dropbox/Project Superman/Resource Files/archived_images/Feed View/location.png"; sourceTree = "<group>"; };
+		9E10B65E15F01AE000CC001F /* Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Annotation.h; sourceTree = "<group>"; };
+		9E10B65F15F01AE000CC001F /* Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Annotation.m; sourceTree = "<group>"; };
+		9E10B66115F01E3500CC001F /* CameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraViewController.h; sourceTree = "<group>"; };
+		9E10B66215F01E3600CC001F /* CameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraViewController.m; sourceTree = "<group>"; };
+		9E10B66315F01E3700CC001F /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		9E10B66615F01EB300CC001F /* CaptureSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureSessionManager.h; sourceTree = "<group>"; };
+		9E10B66715F01EB400CC001F /* CaptureSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureSessionManager.m; sourceTree = "<group>"; };
+		9E6EAB7315F0230000B630B5 /* btn_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_camera.png; sourceTree = "<group>"; };
+		9E6EAB7615F026DD00B630B5 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		9E6EAB7815F026E000B630B5 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		9E6EAB7A15F0277900B630B5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9E6EAB7D15F027ED00B630B5 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		9E6EAB7F15F0294A00B630B5 /* cwsf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cwsf.jpg; sourceTree = "<group>"; };
+		9E6EAB8115F02B3D00B630B5 /* nightpulse_icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nightpulse_icon_57.png; sourceTree = "<group>"; };
+		9E6EAB8315F02B4600B630B5 /* nightpulse_icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nightpulse_icon_114.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +249,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E6EAB7E15F027ED00B630B5 /* ImageIO.framework in Frameworks */,
+				9E6EAB7B15F0277900B630B5 /* AVFoundation.framework in Frameworks */,
+				9E6EAB7915F026E000B630B5 /* CoreMedia.framework in Frameworks */,
+				9E6EAB7715F026DD00B630B5 /* CoreVideo.framework in Frameworks */,
+				9E10B65B15F0118C00CC001F /* MapKit.framework in Frameworks */,
+				9E10B59915EF5DAC00CC001F /* QuartzCore.framework in Frameworks */,
 				03AAEE8D14BE8C1500F179E6 /* CoreLocation.framework in Frameworks */,
 				031316CC1443DA12000CC1B2 /* libz.1.2.5.dylib in Frameworks */,
 				03130130142C2CC500367E8C /* Security.framework in Frameworks */,
@@ -291,6 +339,9 @@
 		0392A8F0143A9E5700F0E307 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				9E6EAB7F15F0294A00B630B5 /* cwsf.jpg */,
+				9E6EAB7315F0230000B630B5 /* btn_camera.png */,
+				9E10B65C15F019A100CC001F /* location.png */,
 				0392A90A143AB4AB00F0E307 /* SampleExploreImage.png */,
 				0392A8FB143AAB2A00F0E307 /* TabBar */,
 				0392A8F9143AA7F300F0E307 /* NightPulseNavBar.png */,
@@ -338,6 +389,14 @@
 		03A8A465141C79A500C45929 = {
 			isa = PBXGroup;
 			children = (
+				9E6EAB8315F02B4600B630B5 /* nightpulse_icon_114.png */,
+				9E6EAB8115F02B3D00B630B5 /* nightpulse_icon_57.png */,
+				9E6EAB7D15F027ED00B630B5 /* ImageIO.framework */,
+				9E6EAB7A15F0277900B630B5 /* AVFoundation.framework */,
+				9E6EAB7815F026E000B630B5 /* CoreMedia.framework */,
+				9E6EAB7615F026DD00B630B5 /* CoreVideo.framework */,
+				9E10B65A15F0118B00CC001F /* MapKit.framework */,
+				9E10B59815EF5DAC00CC001F /* QuartzCore.framework */,
 				03AAEE8C14BE8C1400F179E6 /* CoreLocation.framework */,
 				031316CB1443DA12000CC1B2 /* libz.1.2.5.dylib */,
 				0313013B142C481900367E8C /* Entitlements.entitlements */,
@@ -432,6 +491,7 @@
 		03D3D36B14253805008916BC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9E10B57E15EF576200CC001F /* POI */,
 				0346A83C144E464E009E8E06 /* Tab */,
 				0333B0651443E4E50045FF96 /* General */,
 				0392A904143AAC6400F0E307 /* Explore */,
@@ -442,6 +502,8 @@
 				03A8A48D141C79A600C45929 /* FeedViewController.m */,
 				03A8A483141C79A600C45929 /* NightPulseAppDelegate.h */,
 				03A8A484141C79A600C45929 /* NightPulseAppDelegate.m */,
+				9E10B59515EF5C5000CC001F /* EGORefreshTableHeaderView.h */,
+				9E10B59615EF5C5000CC001F /* EGORefreshTableHeaderView.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -458,6 +520,11 @@
 				0392017F142EE6C900A06595 /* NearbyVenueTableCell.h */,
 				03920180142EE6C900A06595 /* NearbyVenueTableCell.m */,
 				0392017D142EE0F300A06595 /* NearbyVenueTableCell.xib */,
+				9E10B66615F01EB300CC001F /* CaptureSessionManager.h */,
+				9E10B66715F01EB400CC001F /* CaptureSessionManager.m */,
+				9E10B66115F01E3500CC001F /* CameraViewController.h */,
+				9E10B66215F01E3600CC001F /* CameraViewController.m */,
+				9E10B66315F01E3700CC001F /* CameraViewController.xib */,
 			);
 			name = Pulse;
 			sourceTree = "<group>";
@@ -541,6 +608,18 @@
 				03D3D3A114254AE4008916BC /* JSONKit.m */,
 			);
 			path = jsonkit;
+			sourceTree = "<group>";
+		};
+		9E10B57E15EF576200CC001F /* POI */ = {
+			isa = PBXGroup;
+			children = (
+				9E10B65E15F01AE000CC001F /* Annotation.h */,
+				9E10B65F15F01AE000CC001F /* Annotation.m */,
+				9E10B58015EF578100CC001F /* POIViewController.h */,
+				9E10B58115EF578100CC001F /* POIViewController.m */,
+				9E10B58215EF578100CC001F /* POIViewController.xib */,
+			);
+			name = POI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -635,6 +714,13 @@
 				0392A90B143AB4AB00F0E307 /* SampleExploreImage.png in Resources */,
 				0346A83A144E45E6009E8E06 /* tab_pulse.png in Resources */,
 				0346A844144E54A9009E8E06 /* btn_sendpulse.png in Resources */,
+				9E10B58415EF578100CC001F /* POIViewController.xib in Resources */,
+				9E10B65D15F019A100CC001F /* location.png in Resources */,
+				9E10B66515F01E3800CC001F /* CameraViewController.xib in Resources */,
+				9E6EAB7415F0230000B630B5 /* btn_camera.png in Resources */,
+				9E6EAB8015F0294A00B630B5 /* cwsf.jpg in Resources */,
+				9E6EAB8215F02B3D00B630B5 /* nightpulse_icon_57.png in Resources */,
+				9E6EAB8415F02B4600B630B5 /* nightpulse_icon_114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,6 +756,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E6EAB7C15F027BE00B630B5 /* CaptureSessionManager.m in Sources */,
 				03AAEE8E14C5092800F179E6 /* JSONKit.h in Sources */,
 				03A8A481141C79A600C45929 /* main.m in Sources */,
 				03A8A485141C79A600C45929 /* NightPulseAppDelegate.m in Sources */,
@@ -700,6 +787,10 @@
 				0346A842144E46AD009E8E06 /* PulseTabBarController.m in Sources */,
 				03AAEE8B14BE825800F179E6 /* LabelMaker.m in Sources */,
 				03222A7C14F73B2300627544 /* VenueSearch.m in Sources */,
+				9E10B58315EF578100CC001F /* POIViewController.m in Sources */,
+				9E10B59715EF5C5200CC001F /* EGORefreshTableHeaderView.m in Sources */,
+				9E10B66015F01AE000CC001F /* Annotation.m in Sources */,
+				9E10B66415F01E3800CC001F /* CameraViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,6 +799,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03A8A4AB141C79A600C45929 /* NightPulseTests.m in Sources */,
+				9E10B66815F01EB500CC001F /* CaptureSessionManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,7 +980,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Bobby Ren";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Bobby Ren";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -898,7 +991,8 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "NightPulse/NightPulse-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "61582958-CEBB-4F4D-84F9-9C2CBF123744";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "61582958-CEBB-4F4D-84F9-9C2CBF123744";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

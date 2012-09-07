@@ -7,6 +7,7 @@
 //
 
 #import "NightPulseAppDelegate.h"
+#import "PulseRootViewController.h"
 
 //@implementation UINavigationBar (CustomImage)
 //- (void)drawRect:(CGRect)rect
@@ -25,14 +26,19 @@
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize peristentStoreCoordinator = _peristentStoreCoordinator;
-
+@synthesize navController = _navController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     // Override point for customization after application launch.
     // Add the tab bar controller's current view as a subview of the window
-    self.window.rootViewController = self.tabBarController;
-//    [self.tabBarController setSelectedIndex:2];
+    //self.window.rootViewController = self.tabBarController;
+    
+    // use nav controller instead
+    PulseRootViewController * pulseRootViewController = [[PulseRootViewController alloc] init];
+    self.navController = [[UINavigationController alloc] initWithRootViewController:pulseRootViewController];
+    [self.navController.navigationBar setBarStyle:UIBarStyleBlack];
+    self.window.rootViewController = self.navController;
     [self.window makeKeyAndVisible];
 
     return YES;

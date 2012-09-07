@@ -14,5 +14,6 @@
 
 - (void)onNearestVenueSearchResult:(NSMutableArray *)venues;
 
+- (void)onNearestVenueFailed;
 
 @end

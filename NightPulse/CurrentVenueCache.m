@@ -68,6 +68,7 @@ static CurrentVenueCache *cache;
     while ([operationQueue operationCount] != 0) {
 
     }
+    NSLog(@"new location: %f %f cached location: %f %f", location_.latitude, location_.longitude, location.latitude, location.longitude);
     if ([location_ isEqualToLocation:location]) {
         DebugLog(@"Location is same, returning cached venues, count = %i", [venues count]);
         [delegate onNearestVenueResult:venues];
@@ -103,5 +104,9 @@ static CurrentVenueCache *cache;
     }
 }
 
+-(void)onNearestVenueFailed {
+    // search failed; clear cache/location
+    location = nil;
+}
 
 @end

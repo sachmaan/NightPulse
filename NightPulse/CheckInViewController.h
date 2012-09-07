@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "CheckIn.h"
 
+@protocol CheckInDelegate <NSObject>
+
+-(void)didCheckIn;
+
+@end
+
 @interface CheckInViewController : UIViewController
 
 
@@ -23,6 +29,8 @@
 @property(nonatomic, retain) IBOutlet UIButton *sendPulseButton;
 
 @property(nonatomic, retain) CheckIn *checkIn;
+
+@property (nonatomic, assign) id delegate;
 
 - (IBAction)sexRatioSliderChanged:(id)sender;
 

@@ -21,7 +21,7 @@
 @synthesize lineSlider;
 @synthesize pulseSentLabel;
 @synthesize sendPulseButton;
-
+@synthesize delegate;
 
 #pragma Helper Methods
 
@@ -174,10 +174,12 @@
     pulseSentLabel.hidden = false;
 
     NSNumber *boolYes = [[NSNumber alloc] initWithBool:YES];
-    [[self navigationController] performSelector:@selector(popViewControllerAnimated:) withObject:boolYes afterDelay:1];
+//    [[self navigationController] performSelector:@selector(popViewControllerAnimated:) withObject:boolYes afterDelay:1];
 
     [boolYes release];
 //    [[self navigationController] popViewControllerAnimated:YES];
+    
+    [delegate didCheckIn];
 }
 
 @end

@@ -69,6 +69,7 @@
     NSError *error = [request error];
     if (error) {
         DebugLog (@"ERROR =  %@", error.description);
+        [delegate onNearestVenueFailed];
         return;
     }
 
@@ -107,8 +108,30 @@
         venue.name = ((NSString *) [venueDict objectForKey:@"name"]);
         venue.venueId = [venueDict objectForKey:@"id"];
         venue.distance = [[[venueDict objectForKey:@"location"] objectForKey:@"distance"] longValue];
+        
+        // address and location
+        NSDictionary * locationDict = [venueDict objectForKey:@"location"];
+        NSLog(@"Venue: %@", locationDict);
+        
+        NSString * address = [locationDict objectForKey:@"address"];
+        NSString * city = [locationDict objectForKey:@"city"];
+        NSString * state = [locationDict objectForKey:@"state"];
+        NSString * country = [locationDict objectForKey:@"country"];
+        NSString * lat = [locationDict objectForKey:@"lat"];
+        NSString * lon = [locationDict objectForKey:@"lng"];
+        
+        if ([country isEqualToString:@"United States"]) {
+            address = [NSString stringWithFormat:@"%@\n%@, %@", address, city, state];
+        }
+        else {
+            address = [NSString stringWithFormat:@"%@\n%@, %@", address, state, country];
+        }
+        NSLog(@"Venue address: %@", address);
+        [venue setAddress:address];
+        CLLocation * loc = [[CLLocation alloc] initWithLatitude:[lat floatValue] longitude:[lon floatValue]];
+        [venue setLocation:loc];
+
         [venueList addObject:venue];
-//        venueList[count++] = venue;
         [venue release];
     }
 

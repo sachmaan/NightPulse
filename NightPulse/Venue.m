@@ -13,7 +13,8 @@
 @synthesize name;
 @synthesize venueId;
 @synthesize distance;
-
+@synthesize location;
+@synthesize address;
 - (id)init {
     self = [super init];
     if (self) {
@@ -28,6 +29,8 @@
     venue.name = name;
     venue.venueId = venueId;
     venue.distance = distance;
+    venue.address = address;
+    venue.location = location;
     return venue;
 }
 
