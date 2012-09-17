@@ -20,8 +20,6 @@
 		0346A83F144E4671009E8E06 /* PulseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346A83E144E4671009E8E06 /* PulseButton.m */; };
 		0346A842144E46AD009E8E06 /* PulseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346A841144E46AD009E8E06 /* PulseTabBarController.m */; };
 		0346A844144E54A9009E8E06 /* btn_sendpulse.png in Resources */ = {isa = PBXBuildFile; fileRef = 0346A843144E54A9009E8E06 /* btn_sendpulse.png */; };
-		03568A7C142FB4F1006EE984 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 03568A7B142FB4F1006EE984 /* Default.png */; };
-		0392017B142EDB4300A06595 /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 0392017A142EDB4300A06595 /* icon_57.png */; };
 		0392017E142EE0F300A06595 /* NearbyVenueTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0392017D142EE0F300A06595 /* NearbyVenueTableCell.xib */; };
 		03920181142EE6C900A06595 /* NearbyVenueTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03920180142EE6C900A06595 /* NearbyVenueTableCell.m */; };
 		0392A8F4143A9E9B00F0E307 /* CheckInBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 0392A8F3143A9E9B00F0E307 /* CheckInBackground.png */; };
@@ -78,6 +76,11 @@
 		03D3D3B114254ECE008916BC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D3D3B014254ECE008916BC /* SystemConfiguration.framework */; };
 		03D3D3B314254ED5008916BC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D3D3B214254ED5008916BC /* MobileCoreServices.framework */; };
 		03DB2AA414451E3A00C234A5 /* LocationFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DB2AA314451E3A00C234A5 /* LocationFinder.m */; };
+		03FE248C1606D5D000CA2C39 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FE24871606D5D000CA2C39 /* UIImage+Alpha.m */; };
+		03FE248D1606D5D000CA2C39 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FE24891606D5D000CA2C39 /* UIImage+Resize.m */; };
+		03FE248E1606D5D000CA2C39 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FE248B1606D5D000CA2C39 /* UIImage+RoundedCorner.m */; };
+		03FE24941606D69500CA2C39 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 03FE24931606D69500CA2C39 /* Default.png */; };
+		03FE24961606D6A000CA2C39 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03FE24951606D6A000CA2C39 /* Default@2x.png */; };
 		9E10B58315EF578100CC001F /* POIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10B58115EF578100CC001F /* POIViewController.m */; };
 		9E10B58415EF578100CC001F /* POIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E10B58215EF578100CC001F /* POIViewController.xib */; };
 		9E10B59715EF5C5200CC001F /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10B59615EF5C5000CC001F /* EGORefreshTableHeaderView.m */; };
@@ -136,8 +139,6 @@
 		0346A840144E46AD009E8E06 /* PulseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseTabBarController.h; sourceTree = "<group>"; };
 		0346A841144E46AD009E8E06 /* PulseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulseTabBarController.m; sourceTree = "<group>"; };
 		0346A843144E54A9009E8E06 /* btn_sendpulse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_sendpulse.png; sourceTree = "<group>"; };
-		03568A7B142FB4F1006EE984 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		0392017A142EDB4300A06595 /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57.png; sourceTree = "<group>"; };
 		0392017D142EE0F300A06595 /* NearbyVenueTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyVenueTableCell.xib; sourceTree = "<group>"; };
 		0392017F142EE6C900A06595 /* NearbyVenueTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyVenueTableCell.h; sourceTree = "<group>"; };
 		03920180142EE6C900A06595 /* NearbyVenueTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyVenueTableCell.m; sourceTree = "<group>"; };
@@ -219,6 +220,14 @@
 		03D3D3B014254ECE008916BC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		03D3D3B214254ED5008916BC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		03DB2AA314451E3A00C234A5 /* LocationFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationFinder.m; sourceTree = "<group>"; };
+		03FE24861606D5D000CA2C39 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Alpha.h"; sourceTree = "<group>"; };
+		03FE24871606D5D000CA2C39 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Alpha.m"; sourceTree = "<group>"; };
+		03FE24881606D5D000CA2C39 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Resize.h"; sourceTree = "<group>"; };
+		03FE24891606D5D000CA2C39 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Resize.m"; sourceTree = "<group>"; };
+		03FE248A1606D5D000CA2C39 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RoundedCorner.h"; sourceTree = "<group>"; };
+		03FE248B1606D5D000CA2C39 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
+		03FE24931606D69500CA2C39 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		03FE24951606D6A000CA2C39 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9E10B58015EF578100CC001F /* POIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POIViewController.h; sourceTree = "<group>"; };
 		9E10B58115EF578100CC001F /* POIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POIViewController.m; sourceTree = "<group>"; };
 		9E10B58215EF578100CC001F /* POIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = POIViewController.xib; sourceTree = "<group>"; };
@@ -389,6 +398,8 @@
 		03A8A465141C79A500C45929 = {
 			isa = PBXGroup;
 			children = (
+				03FE24951606D6A000CA2C39 /* Default@2x.png */,
+				03FE24931606D69500CA2C39 /* Default.png */,
 				9E6EAB8315F02B4600B630B5 /* nightpulse_icon_114.png */,
 				9E6EAB8115F02B3D00B630B5 /* nightpulse_icon_57.png */,
 				9E6EAB7D15F027ED00B630B5 /* ImageIO.framework */,
@@ -451,8 +462,6 @@
 			isa = PBXGroup;
 			children = (
 				0392A8F0143A9E5700F0E307 /* Images */,
-				03568A7B142FB4F1006EE984 /* Default.png */,
-				0392017A142EDB4300A06595 /* icon_57.png */,
 				03A8A47C141C79A600C45929 /* NightPulse-Info.plist */,
 				03A8A47D141C79A600C45929 /* InfoPlist.strings */,
 				03A8A480141C79A600C45929 /* main.m */,
@@ -491,6 +500,7 @@
 		03D3D36B14253805008916BC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				03FE24841606D5B300CA2C39 /* UIImage-Categories */,
 				9E10B57E15EF576200CC001F /* POI */,
 				0346A83C144E464E009E8E06 /* Tab */,
 				0333B0651443E4E50045FF96 /* General */,
@@ -610,6 +620,19 @@
 			path = jsonkit;
 			sourceTree = "<group>";
 		};
+		03FE24841606D5B300CA2C39 /* UIImage-Categories */ = {
+			isa = PBXGroup;
+			children = (
+				03FE24861606D5D000CA2C39 /* UIImage+Alpha.h */,
+				03FE24871606D5D000CA2C39 /* UIImage+Alpha.m */,
+				03FE24881606D5D000CA2C39 /* UIImage+Resize.h */,
+				03FE24891606D5D000CA2C39 /* UIImage+Resize.m */,
+				03FE248A1606D5D000CA2C39 /* UIImage+RoundedCorner.h */,
+				03FE248B1606D5D000CA2C39 /* UIImage+RoundedCorner.m */,
+			);
+			name = "UIImage-Categories";
+			sourceTree = "<group>";
+		};
 		9E10B57E15EF576200CC001F /* POI */ = {
 			isa = PBXGroup;
 			children = (
@@ -699,9 +722,7 @@
 				03A8A4B8141C7B6300C45929 /* CheckInViewController.xib in Resources */,
 				03D3D37114254020008916BC /* PulseRootViewController.xib in Resources */,
 				0313013C142C481A00367E8C /* Entitlements.entitlements in Resources */,
-				0392017B142EDB4300A06595 /* icon_57.png in Resources */,
 				0392017E142EE0F300A06595 /* NearbyVenueTableCell.xib in Resources */,
-				03568A7C142FB4F1006EE984 /* Default.png in Resources */,
 				0392A8F4143A9E9B00F0E307 /* CheckInBackground.png in Resources */,
 				0392A8F7143AA45600F0E307 /* slider_line.png in Resources */,
 				0392A8F8143AA45600F0E307 /* slider.png in Resources */,
@@ -721,6 +742,8 @@
 				9E6EAB8015F0294A00B630B5 /* cwsf.jpg in Resources */,
 				9E6EAB8215F02B3D00B630B5 /* nightpulse_icon_57.png in Resources */,
 				9E6EAB8415F02B4600B630B5 /* nightpulse_icon_114.png in Resources */,
+				03FE24941606D69500CA2C39 /* Default.png in Resources */,
+				03FE24961606D6A000CA2C39 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -791,6 +814,9 @@
 				9E10B59715EF5C5200CC001F /* EGORefreshTableHeaderView.m in Sources */,
 				9E10B66015F01AE000CC001F /* Annotation.m in Sources */,
 				9E10B66415F01E3800CC001F /* CameraViewController.m in Sources */,
+				03FE248C1606D5D000CA2C39 /* UIImage+Alpha.m in Sources */,
+				03FE248D1606D5D000CA2C39 /* UIImage+Resize.m in Sources */,
+				03FE248E1606D5D000CA2C39 /* UIImage+RoundedCorner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
