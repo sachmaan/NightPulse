@@ -48,7 +48,8 @@
 - (void)doVenueQuery {
     NSString *urlString;
 
-    NSString *VENUES_SEARCH_URL = @"https://api.foursquare.com/v2/venues/search?v=20111011&ll=%f,%f&categoryId=%@&client_id=%@&client_secret=%@";
+//    NSString *VENUES_SEARCH_URL = @"https://api.foursquare.com/v2/venues/search?v=20111011&ll=%f,%f&categoryId=%@&client_id=%@&client_secret=%@";
+    NSString *VENUES_SEARCH_URL = @"https://api.foursquare.com/v2/venues/search?v=20111011&ll=%f,%f&client_id=%@&client_secret=%@";
 
     NSString *VENUES_SEARCH_URL_WITH_TERM = @"https://api.foursquare.com/v2/venues/search?v=20111011&ll=%f,%f&client_id=%@&client_secret=%@&query=%@";
 
@@ -56,7 +57,7 @@
 
     bool searchTermExists = (nil != searchTerm);
     if (!searchTermExists) {
-        urlString = [NSString stringWithFormat:VENUES_SEARCH_URL, location.latitude, location.longitude, FOURSQ_NIGHTLIFE_CAT_ID, FOURSQ_CLIENT_ID, FOURSQ_CLIENT_SECRET];
+        urlString = [NSString stringWithFormat:VENUES_SEARCH_URL, location.latitude, location.longitude, /*FOURSQ_NIGHTLIFE_CAT_ID, */FOURSQ_CLIENT_ID, FOURSQ_CLIENT_SECRET];
     } else {
         urlString = [NSString stringWithFormat:VENUES_SEARCH_URL_WITH_TERM, location.latitude, location.longitude, /*FOURSQ_NIGHTLIFE_CAT_ID,*/ FOURSQ_CLIENT_ID, FOURSQ_CLIENT_SECRET, searchTerm];
     }
@@ -95,13 +96,16 @@
     NSMutableArray *venueList = [[NSMutableArray alloc] initWithCapacity:[nearbyVenuesDicts count] + 1];
 
     //Remove later
+    /*
     Venue *testVenue = [[[Venue alloc] init] autorelease];
     testVenue.name = @"Test Venue";
     testVenue.venueId = @"100000000000";
     testVenue.distance = 345;
-//    venueList[0] = testVenue;
+     */
+    //    venueList[0] = testVenue;
 
-    [venueList addObject:testVenue];
+    
+    //[venueList addObject:testVenue];
 //    int count = 1;
     for (NSDictionary *venueDict in nearbyVenuesDicts) {
         Venue *venue = [[Venue alloc] init];

@@ -51,8 +51,16 @@
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     DebugLog(@"Received Location");
     Location *location = [[Location alloc] init];
+    
+    //NEW YORK
 //    location.latitude = 40.730223;
 //    location.longitude = -73.988564;
+    
+    //ANDALA COFFEE HOUSE, CENTRAL SQUARE
+    //    location.latitude = 42.364838;
+    //    location.longitude = -71.106222;
+    
+    //ACTUAL LAT/LONG FROM GPS
     location.latitude = newLocation.coordinate.latitude;
     location.longitude = newLocation.coordinate.longitude;
     DebugLog(@"GOT LOCATION! %@", newLocation);
