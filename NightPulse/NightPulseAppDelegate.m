@@ -35,6 +35,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
+    // venue data
+    currentVenueCache = [CurrentVenueCache getCache];
+    [currentVenueCache registerDelegate:self];
+    venueSearch = [[VenueSearch alloc] init];
+    
     // Override point for customization after application launch.
     // Add the tab bar controller's current view as a subview of the window
     self.window.rootViewController = self.tabBarController;
@@ -51,13 +56,6 @@
     [self.window makeKeyAndVisible];
 
     [Crashlytics startWithAPIKey:@"747b4305662b69b595ac36f88f9c2abe54885ba3"];
-    
-    // venue data
-    currentVenueCache = [CurrentVenueCache getCache];
-    [currentVenueCache registerDelegate:self];
-    venueSearch = [[VenueSearch alloc] init];
-    
-
     
     return YES;
 }

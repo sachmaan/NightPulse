@@ -27,6 +27,7 @@
 #endif
     
     id delegate;
+    UINavigationController * modalNav;
 }
 
 #if USE_PULL_TO_REFRESH

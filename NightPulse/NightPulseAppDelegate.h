@@ -31,4 +31,7 @@
 @property(nonatomic, retain) CurrentVenueCache *currentVenueCache;
 @property(nonatomic, retain) VenueSearch *venueSearch;
 
+-(void)refreshVenues:(NSString*)searchTerm;
+-(NSArray*)getVenues;
+
 @end

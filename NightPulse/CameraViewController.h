@@ -10,14 +10,15 @@
 #import "CaptureSessionManager.h"
 #import "UIImage+Resize.h"
 #import "UIImage+RoundedCorner.h"
+#import "CheckInViewController.h"
 
 @protocol CameraDelegate <NSObject>
 
 -(void)didCaptureImage:(UIImage*)image;
-
+-(void)didCancelCaptureImage;
 @end
 
-@interface CameraViewController : UIViewController
+@interface CameraViewController : UIViewController <UINavigationControllerDelegate>
 
 @property (retain) CaptureSessionManager *captureManager;
 @property (nonatomic, assign) BOOL isCapturing;

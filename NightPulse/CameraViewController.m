@@ -44,8 +44,12 @@
     // add a notification for completion of capture
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didCaptureImage) name:kImageCapturedSuccessfully object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(captureImageDidFail:) name:kImageCaptureFailed object:nil];
+    UIBarButtonItem * backButton = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStyleDone target:self action:@selector(cancel)];
+    [self.navigationItem setLeftBarButtonItem:backButton];
     
     [self startCamera];
+    
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 - (void)viewDidUnload
@@ -69,6 +73,9 @@
     [[captureManager captureSession] stopRunning];
 }
 
+-(void)cancel {
+    [delegate didCancelCaptureImage];
+}
 
 -(IBAction)didClickTakePicture:(id)sender {
     if (isCapturing)

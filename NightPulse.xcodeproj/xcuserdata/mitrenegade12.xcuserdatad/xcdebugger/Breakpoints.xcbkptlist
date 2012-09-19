@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "NightPulse/PulseRootViewController.m"
-         timestampString = "369767069.850417"
+         timestampString = "369786351.710369"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "161"
-         endingLineNumber = "161"
+         startingLineNumber = "177"
+         endingLineNumber = "177"
          landmarkName = "-tableView:heightForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "NightPulse/PulseRootViewController.m"
-         timestampString = "369767069.850417"
+         timestampString = "369786351.710369"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "240"
-         endingLineNumber = "240"
+         startingLineNumber = "256"
+         endingLineNumber = "256"
          landmarkName = "-reloadTableViewDataSource"
          landmarkType = "5">
       </FileBreakpoint>
@@ -121,29 +121,16 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "NightPulse/NightPulseAppDelegate.m"
-         timestampString = "369767229.53073"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "128"
-         endingLineNumber = "128"
-         landmarkName = "-refreshVenues:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "NightPulse/PulseRootViewController.m"
-         timestampString = "369767244.181825"
+         timestampString = "369785901.62278"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "86"
-         endingLineNumber = "86"
-         landmarkName = "-viewWillAppear:"
+         startingLineNumber = "104"
+         endingLineNumber = "104"
+         landmarkName = "-refresh:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

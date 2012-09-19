@@ -10,6 +10,7 @@
 #import "ASIHTTPRequest.h"
 #import "JSONKit.h"
 #import "NearbyVenueTableCell.h"
+#import "NightPulseAppDelegate.h"
 
 //#import "TempController.h"
 @interface PulseRootViewController ()
@@ -37,9 +38,9 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        UIImageView * logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"NightPulseNavBar"]];
-        [self.navigationItem setTitleView:logo];
-        [logo release];
+        //UIImageView * logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"NightPulseNavBar"]];
+        //[self.navigationItem setTitleView:logo];
+        //[logo release];
     }
     return self;
 }
@@ -86,16 +87,21 @@
     [self refresh:nil];
 }
 
-/*
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+}
+
 #pragma Helper
 - (Venue *)getVenue:(NSIndexPath *)indexPath {
-    NSArray * venues = [delegate getVenues];
+    NightPulseAppDelegate * appDelegate = (NightPulseAppDelegate*)[UIApplication sharedApplication].delegate;
+    NSArray * venues = [appDelegate getVenues];
     return ((Venue *) [venues objectAtIndex:indexPath.row]);
 }
-*/
 
 - (void)refresh:(NSString *)searchTerm {
-    [delegate refreshVenues:searchTerm];
+//    [delegate refreshVenues:searchTerm];
+    [((NightPulseAppDelegate *)[UIApplication sharedApplication].delegate) refreshVenues:nil];
 }
 
 -(void)updateNearbyVenues {
@@ -125,7 +131,9 @@
     // does nothing
     [cell setBackgroundColor:[UIColor blueColor]];
     
-    NSArray * venues = [delegate getVenues];
+    // hack
+    NightPulseAppDelegate * appDelegate = (NightPulseAppDelegate*)[UIApplication sharedApplication].delegate;
+    NSArray * venues = [appDelegate getVenues];
 //    cell.textLabel.text = [NSString stringWithFormat:@"Row %f", indexPath.row];
     if (indexPath.row < venues.count) {
 //        cell.textLabel.text = [self getVenue:indexPath].name;
@@ -144,7 +152,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    NSArray * venues = [delegate getVenues];
+    NightPulseAppDelegate * appDelegate = (NightPulseAppDelegate*)[UIApplication sharedApplication].delegate;
+    NSArray * venues = [appDelegate getVenues];
     return venues.count;
 //    return 4;
 }
@@ -154,7 +163,14 @@
     [self setCurrentVenueIndexPath:indexPath];
     CameraViewController * camera = [[CameraViewController alloc] init];
     [camera setDelegate:self];
-    [self.navigationController pushViewController:camera animated:YES];
+    //[self.navigationController pushViewController:camera animated:YES];
+    modalNav = [[UINavigationController alloc] initWithRootViewController:camera];
+    [modalNav setDelegate:self];
+    modalNav.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    
+    //[camera.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStyleDone target:self action:@selector(dismissModalViewControllerAnimated:)]];
+    
+    [self presentModalViewController:modalNav animated:YES];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -242,6 +258,10 @@
 #endif
 
 #pragma mark CameraDelegate 
+-(void)didCancelCaptureImage {
+    [self dismissModalViewControllerAnimated:YES];
+}
+
 -(void)didCaptureImage:(UIImage *)image {
     [self setVenueImage:image];
     
@@ -249,7 +269,7 @@
     checkInViewController.checkIn.userId = @"nenes";
     checkInViewController.checkIn.venue = [self getVenue:currentVenueIndexPath];
     [checkInViewController setDelegate:self];
-    [[self navigationController] pushViewController:checkInViewController animated:YES];
+    [modalNav pushViewController:checkInViewController animated:YES];
     [checkInViewController release];
 }
 
@@ -258,6 +278,6 @@
     POIViewController * poiController = [[POIViewController alloc] init];
     [poiController setVenue:[self getVenue:currentVenueIndexPath]];
     [poiController setVenueImage:[self venueImage]];
-    [self.navigationController pushViewController:poiController animated:YES];
+    [modalNav pushViewController:poiController animated:YES];
 }
 @end
