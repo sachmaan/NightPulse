@@ -7,9 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "NearestVenueResultDelegate.h"
-#import "CurrentVenueCache.h"
-#import "VenueSearch.h"
 #import "POIViewController.h"
 #import "EGORefreshTableHeaderView.h"
 #import "CameraViewController.h"
@@ -17,15 +14,19 @@
 
 #define USE_PULL_TO_REFRESH 1
 
-@interface PulseRootViewController : UITableViewController <NearestVenueResultDelegate, UISearchBarDelegate, UINavigationControllerDelegate, CameraDelegate, CheckInDelegate> {
-    NSMutableArray *venues;
-    CurrentVenueCache *currentVenueCache;
-    VenueSearch *venueSearch;
+@protocol PulseDelegate <NSObject>
+
+-(void)refreshVenues:(NSString*)searchTerm;
+-(NSArray*)getVenues;
+@end
+
+@interface PulseRootViewController : UITableViewController < UISearchBarDelegate, UINavigationControllerDelegate, CameraDelegate, CheckInDelegate> {
 #if USE_PULL_TO_REFRESH
 	EGORefreshTableHeaderView *refreshHeaderView;
 	BOOL _reloading;
 #endif
     
+    id delegate;
 }
 
 #if USE_PULL_TO_REFRESH
@@ -33,7 +34,7 @@
 @property(nonatomic,readonly) EGORefreshTableHeaderView *refreshHeaderView;
 @property(nonatomic, retain) UIImage * venueImage;
 @property(nonatomic, retain) NSIndexPath * currentVenueIndexPath;
-
+@property(nonatomic, assign) id delegate;
 #endif
 
 @end

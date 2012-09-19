@@ -8,7 +8,8 @@
 
 #import "NightPulseAppDelegate.h"
 #import "PulseRootViewController.h"
-
+#import <Crashlytics/Crashlytics.h>
+#import "NearbyViewController.h"
 //@implementation UINavigationBar (CustomImage)
 //- (void)drawRect:(CGRect)rect
 //{
@@ -28,19 +29,36 @@
 @synthesize peristentStoreCoordinator = _peristentStoreCoordinator;
 @synthesize navController = _navController;
 
+@synthesize currentVenueCache;
+@synthesize venues;
+@synthesize venueSearch;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     // Override point for customization after application launch.
     // Add the tab bar controller's current view as a subview of the window
-    //self.window.rootViewController = self.tabBarController;
+    self.window.rootViewController = self.tabBarController;
     
     // use nav controller instead
+    /*
     PulseRootViewController * pulseRootViewController = [[PulseRootViewController alloc] init];
     self.navController = [[UINavigationController alloc] initWithRootViewController:pulseRootViewController];
+    NearbyViewController * nearbyViewController = [[NearbyViewController alloc] init];
+//    self.navController = [[UINavigationController alloc] initWithRootViewController:nearbyViewController];
     [self.navController.navigationBar setBarStyle:UIBarStyleBlack];
     self.window.rootViewController = self.navController;
+     */
     [self.window makeKeyAndVisible];
 
+    [Crashlytics startWithAPIKey:@"747b4305662b69b595ac36f88f9c2abe54885ba3"];
+    
+    // venue data
+    currentVenueCache = [CurrentVenueCache getCache];
+    [currentVenueCache registerDelegate:self];
+    venueSearch = [[VenueSearch alloc] init];
+    
+
+    
     return YES;
 }
 
@@ -79,6 +97,9 @@
 }
 
 - (void)dealloc {
+    [currentVenueCache release];
+    [venueSearch release];
+
     [_window release];
     [_tabBarController release];
     [super dealloc];
@@ -98,5 +119,39 @@
 {
 }
 */
+
+#pragma mark LocationHelper
+
+- (void)refreshVenues:(NSString *)searchTerm {
+    
+    DebugLog(@"Calling refresh");
+    if (nil == searchTerm) {
+        [currentVenueCache findNearestVenues:self];
+    } else {
+        [venueSearch searchForSpecificVenuesNearby:self searchTerm:searchTerm];
+    }
+}
+
+-(NSArray*)getVenues {
+    return venues;
+}
+
+- (void)onNearestVenueResult:(NSMutableArray *)venues_ {
+    DebugLog(@"calling onNearestVenueResult");
+    [venues_ retain];
+    if (nil != venues)
+        [venues release];
+    venues = venues_;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"notification_didGetVenues" object:self userInfo:nil];    
+}
+
+- (void)onNearestVenueSearchResult:(NSMutableArray *)venues_ {
+    DebugLog(@"calling onNearestVenueSearchResult");
+    venues = venues_;
+
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"notification_didGetVenues" object:self userInfo:nil];
+}
+
 
 @end

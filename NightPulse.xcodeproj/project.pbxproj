@@ -78,6 +78,8 @@
 		03D3D3B114254ECE008916BC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D3D3B014254ECE008916BC /* SystemConfiguration.framework */; };
 		03D3D3B314254ED5008916BC /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D3D3B214254ED5008916BC /* MobileCoreServices.framework */; };
 		03DB2AA414451E3A00C234A5 /* LocationFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 03DB2AA314451E3A00C234A5 /* LocationFinder.m */; };
+		9E022D341608EE2200771BBB /* NearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E022D321608EE2200771BBB /* NearbyViewController.m */; };
+		9E022D351608EE2200771BBB /* NearbyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E022D331608EE2200771BBB /* NearbyViewController.xib */; };
 		9E10B58315EF578100CC001F /* POIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10B58115EF578100CC001F /* POIViewController.m */; };
 		9E10B58415EF578100CC001F /* POIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E10B58215EF578100CC001F /* POIViewController.xib */; };
 		9E10B59715EF5C5200CC001F /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10B59615EF5C5000CC001F /* EGORefreshTableHeaderView.m */; };
@@ -97,6 +99,7 @@
 		9E6EAB8015F0294A00B630B5 /* cwsf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAB7F15F0294A00B630B5 /* cwsf.jpg */; };
 		9E6EAB8215F02B3D00B630B5 /* nightpulse_icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAB8115F02B3D00B630B5 /* nightpulse_icon_57.png */; };
 		9E6EAB8415F02B4600B630B5 /* nightpulse_icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAB8315F02B4600B630B5 /* nightpulse_icon_114.png */; };
+		9E86801516011C5100911485 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E86801416011C5000911485 /* Crashlytics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -219,6 +222,9 @@
 		03D3D3B014254ECE008916BC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		03D3D3B214254ED5008916BC /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		03DB2AA314451E3A00C234A5 /* LocationFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationFinder.m; sourceTree = "<group>"; };
+		9E022D311608EE2100771BBB /* NearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyViewController.h; sourceTree = "<group>"; };
+		9E022D321608EE2200771BBB /* NearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyViewController.m; sourceTree = "<group>"; };
+		9E022D331608EE2200771BBB /* NearbyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyViewController.xib; sourceTree = "<group>"; };
 		9E10B58015EF578100CC001F /* POIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POIViewController.h; sourceTree = "<group>"; };
 		9E10B58115EF578100CC001F /* POIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POIViewController.m; sourceTree = "<group>"; };
 		9E10B58215EF578100CC001F /* POIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = POIViewController.xib; sourceTree = "<group>"; };
@@ -242,6 +248,7 @@
 		9E6EAB7F15F0294A00B630B5 /* cwsf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cwsf.jpg; sourceTree = "<group>"; };
 		9E6EAB8115F02B3D00B630B5 /* nightpulse_icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nightpulse_icon_57.png; sourceTree = "<group>"; };
 		9E6EAB8315F02B4600B630B5 /* nightpulse_icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nightpulse_icon_114.png; sourceTree = "<group>"; };
+		9E86801416011C5000911485 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +274,7 @@
 				03A8A477141C79A600C45929 /* Foundation.framework in Frameworks */,
 				03A8A479141C79A600C45929 /* CoreGraphics.framework in Frameworks */,
 				03AAEE8714BD39A700F179E6 /* Parse.framework in Frameworks */,
+				9E86801516011C5100911485 /* Crashlytics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +384,9 @@
 		0392A904143AAC6400F0E307 /* Explore */ = {
 			isa = PBXGroup;
 			children = (
+				9E022D311608EE2100771BBB /* NearbyViewController.h */,
+				9E022D321608EE2200771BBB /* NearbyViewController.m */,
+				9E022D331608EE2200771BBB /* NearbyViewController.xib */,
 				03A8A489141C79A600C45929 /* ExploreViewController.h */,
 				03A8A48A141C79A600C45929 /* ExploreViewController.m */,
 				03A8A48F141C79A600C45929 /* ExploreViewController.xib */,
@@ -406,6 +417,7 @@
 				03D3D3B214254ED5008916BC /* MobileCoreServices.framework */,
 				03D3D3B014254ECE008916BC /* SystemConfiguration.framework */,
 				03D3D3AE14254EBE008916BC /* CFNetwork.framework */,
+				9E86801416011C5000911485 /* Crashlytics.framework */,
 				03A8A47A141C79A600C45929 /* NightPulse */,
 				03A8A4A2141C79A600C45929 /* NightPulseTests */,
 				03A8A473141C79A600C45929 /* Frameworks */,
@@ -632,6 +644,7 @@
 				03A8A46C141C79A600C45929 /* Sources */,
 				03A8A46D141C79A600C45929 /* Frameworks */,
 				03A8A46E141C79A600C45929 /* Resources */,
+				9E86801216011C3000911485 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -721,6 +734,7 @@
 				9E6EAB8015F0294A00B630B5 /* cwsf.jpg in Resources */,
 				9E6EAB8215F02B3D00B630B5 /* nightpulse_icon_57.png in Resources */,
 				9E6EAB8415F02B4600B630B5 /* nightpulse_icon_114.png in Resources */,
+				9E022D351608EE2200771BBB /* NearbyViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,6 +762,19 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		9E86801216011C3000911485 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 747b4305662b69b595ac36f88f9c2abe54885ba3";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -791,6 +818,7 @@
 				9E10B59715EF5C5200CC001F /* EGORefreshTableHeaderView.m in Sources */,
 				9E10B66015F01AE000CC001F /* Annotation.m in Sources */,
 				9E10B66415F01E3800CC001F /* CameraViewController.m in Sources */,
+				9E022D341608EE2200771BBB /* NearbyViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -881,7 +909,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = Entitlements.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sachin Nene";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -891,7 +919,6 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "NightPulse/NightPulse-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "E97DF8E4-E21E-4ED3-860E-390177A6233C";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -962,6 +989,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -980,8 +1008,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Bobby Ren";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Bobby Ren";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -991,8 +1019,6 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "NightPulse/NightPulse-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "61582958-CEBB-4F4D-84F9-9C2CBF123744";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "61582958-CEBB-4F4D-84F9-9C2CBF123744";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

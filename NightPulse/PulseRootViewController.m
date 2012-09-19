@@ -30,6 +30,7 @@
 @synthesize venueImage;
 @synthesize currentVenueIndexPath;
 #endif
+@synthesize delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     DebugLog(@"initWithNibName");
@@ -57,10 +58,6 @@
     [super viewDidLoad];
 
     DebugLog(@"Loading Pulse Root");
-    currentVenueCache = [CurrentVenueCache getCache];
-    [currentVenueCache registerDelegate:self];
-    venueSearch = [[VenueSearch alloc] init];
-    
     [self.tableView setBackgroundColor:[UIColor blackColor]];
 
 #if USE_PULL_TO_REFRESH
@@ -72,12 +69,16 @@
         self.tableView.showsVerticalScrollIndicator = YES;
     }
 #endif
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(updateNearbyVenues) 
+                                                 name:@"notification_didGetVenues" 
+                                               object:nil];
+    
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
-    [currentVenueCache release];
-    [venueSearch release];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -85,39 +86,21 @@
     [self refresh:nil];
 }
 
+/*
 #pragma Helper
-
 - (Venue *)getVenue:(NSIndexPath *)indexPath {
+    NSArray * venues = [delegate getVenues];
     return ((Venue *) [venues objectAtIndex:indexPath.row]);
 }
-
+*/
 
 - (void)refresh:(NSString *)searchTerm {
-
-    DebugLog(@"Calling refresh");
-    if (nil == searchTerm) {
-        [currentVenueCache findNearestVenues:self];
-    } else {
-        [venueSearch searchForSpecificVenuesNearby:self searchTerm:searchTerm];
-    }
+    [delegate refreshVenues:searchTerm];
 }
 
-- (void)onNearestVenueResult:(NSMutableArray *)venues_ {
-    DebugLog(@"calling onNearestVenueResult");
-    [venues_ retain];
-    if (nil != venues)
-        [venues release];
-    venues = venues_;
-
+-(void)updateNearbyVenues {
     [self.tableView reloadData];
 }
-
-- (void)onNearestVenueSearchResult:(NSMutableArray *)venues_ {
-    DebugLog(@"calling onNearestVenueSearchResult");
-    venues = venues_;
-    [self.tableView reloadData];
-}
-
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
@@ -142,13 +125,14 @@
     // does nothing
     [cell setBackgroundColor:[UIColor blueColor]];
     
-
+    NSArray * venues = [delegate getVenues];
 //    cell.textLabel.text = [NSString stringWithFormat:@"Row %f", indexPath.row];
     if (indexPath.row < venues.count) {
 //        cell.textLabel.text = [self getVenue:indexPath].name;
         Venue *venue = [self getVenue:indexPath];
         cell.venueName.text = venue.name;
         cell.venueDistance.text = [NSString stringWithFormat:@"%ld m", venue.distance];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
 
     return cell;
@@ -160,6 +144,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NSArray * venues = [delegate getVenues];
     return venues.count;
 //    return 4;
 }
@@ -170,10 +155,6 @@
     CameraViewController * camera = [[CameraViewController alloc] init];
     [camera setDelegate:self];
     [self.navigationController pushViewController:camera animated:YES];
-}
-
-- (UITableViewCellAccessoryType)tableView:(UITableView *)tv accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewCellAccessoryDisclosureIndicator;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
