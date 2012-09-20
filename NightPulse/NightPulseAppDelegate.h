@@ -8,8 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "NearestVenueResultDelegate.h"
+#import "CurrentVenueCache.h"
+#import "VenueSearch.h"
 
-@interface NightPulseAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate, UINavigationControllerDelegate>
+@interface NightPulseAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate, UINavigationControllerDelegate, NearestVenueResultDelegate>
 
 @property(nonatomic, retain) IBOutlet UIWindow *window;
 
@@ -23,5 +26,12 @@
 
 @property(nonatomic, retain) NSPersistentStoreCoordinator *peristentStoreCoordinator;
 
+// venue and search
+@property(nonatomic, retain) NSMutableArray *venues;
+@property(nonatomic, retain) CurrentVenueCache *currentVenueCache;
+@property(nonatomic, retain) VenueSearch *venueSearch;
+
+-(void)refreshVenues:(NSString*)searchTerm;
+-(NSArray*)getVenues;
 
 @end

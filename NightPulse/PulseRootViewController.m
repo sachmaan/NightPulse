@@ -10,6 +10,7 @@
 #import "ASIHTTPRequest.h"
 #import "JSONKit.h"
 #import "NearbyVenueTableCell.h"
+#import "NightPulseAppDelegate.h"
 
 //#import "TempController.h"
 @interface PulseRootViewController ()
@@ -30,15 +31,16 @@
 @synthesize venueImage;
 @synthesize currentVenueIndexPath;
 #endif
+@synthesize delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     DebugLog(@"initWithNibName");
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
-        UIImageView * logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"NightPulseNavBar"]];
-        [self.navigationItem setTitleView:logo];
-        [logo release];
+        //UIImageView * logo = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"NightPulseNavBar"]];
+        //[self.navigationItem setTitleView:logo];
+        //[logo release];
     }
     return self;
 }
@@ -57,10 +59,6 @@
     [super viewDidLoad];
 
     DebugLog(@"Loading Pulse Root");
-    currentVenueCache = [CurrentVenueCache getCache];
-    [currentVenueCache registerDelegate:self];
-    venueSearch = [[VenueSearch alloc] init];
-    
     [self.tableView setBackgroundColor:[UIColor blackColor]];
 
 #if USE_PULL_TO_REFRESH
@@ -72,12 +70,16 @@
         self.tableView.showsVerticalScrollIndicator = YES;
     }
 #endif
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self 
+                                             selector:@selector(updateNearbyVenues) 
+                                                 name:@"notification_didGetVenues" 
+                                               object:nil];
+    
 }
 
 - (void)viewDidUnload {
     [super viewDidUnload];
-    [currentVenueCache release];
-    [venueSearch release];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -85,39 +87,26 @@
     [self refresh:nil];
 }
 
-#pragma Helper
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES];
+}
 
+#pragma Helper
 - (Venue *)getVenue:(NSIndexPath *)indexPath {
+    NightPulseAppDelegate * appDelegate = (NightPulseAppDelegate*)[UIApplication sharedApplication].delegate;
+    NSArray * venues = [appDelegate getVenues];
     return ((Venue *) [venues objectAtIndex:indexPath.row]);
 }
 
-
 - (void)refresh:(NSString *)searchTerm {
-
-    DebugLog(@"Calling refresh");
-    if (nil == searchTerm) {
-        [currentVenueCache findNearestVenues:self];
-    } else {
-        [venueSearch searchForSpecificVenuesNearby:self searchTerm:searchTerm];
-    }
+//    [delegate refreshVenues:searchTerm];
+    [((NightPulseAppDelegate *)[UIApplication sharedApplication].delegate) refreshVenues:nil];
 }
 
-- (void)onNearestVenueResult:(NSMutableArray *)venues_ {
-    DebugLog(@"calling onNearestVenueResult");
-    [venues_ retain];
-    if (nil != venues)
-        [venues release];
-    venues = venues_;
-
+-(void)updateNearbyVenues {
     [self.tableView reloadData];
 }
-
-- (void)onNearestVenueSearchResult:(NSMutableArray *)venues_ {
-    DebugLog(@"calling onNearestVenueSearchResult");
-    venues = venues_;
-    [self.tableView reloadData];
-}
-
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
     // Return YES for supported orientations
@@ -142,13 +131,16 @@
     // does nothing
     [cell setBackgroundColor:[UIColor blueColor]];
     
-
+    // hack
+    NightPulseAppDelegate * appDelegate = (NightPulseAppDelegate*)[UIApplication sharedApplication].delegate;
+    NSArray * venues = [appDelegate getVenues];
 //    cell.textLabel.text = [NSString stringWithFormat:@"Row %f", indexPath.row];
     if (indexPath.row < venues.count) {
 //        cell.textLabel.text = [self getVenue:indexPath].name;
         Venue *venue = [self getVenue:indexPath];
         cell.venueName.text = venue.name;
         cell.venueDistance.text = [NSString stringWithFormat:@"%ld m", venue.distance];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
 
     return cell;
@@ -160,6 +152,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    NightPulseAppDelegate * appDelegate = (NightPulseAppDelegate*)[UIApplication sharedApplication].delegate;
+    NSArray * venues = [appDelegate getVenues];
     return venues.count;
 //    return 4;
 }
@@ -169,11 +163,14 @@
     [self setCurrentVenueIndexPath:indexPath];
     CameraViewController * camera = [[CameraViewController alloc] init];
     [camera setDelegate:self];
-    [self.navigationController pushViewController:camera animated:YES];
-}
-
-- (UITableViewCellAccessoryType)tableView:(UITableView *)tv accessoryTypeForRowWithIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewCellAccessoryDisclosureIndicator;
+    //[self.navigationController pushViewController:camera animated:YES];
+    modalNav = [[UINavigationController alloc] initWithRootViewController:camera];
+    [modalNav setDelegate:self];
+    modalNav.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    
+    //[camera.navigationItem setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStyleDone target:self action:@selector(dismissModalViewControllerAnimated:)]];
+    
+    [self presentModalViewController:modalNav animated:YES];
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -261,6 +258,10 @@
 #endif
 
 #pragma mark CameraDelegate 
+-(void)didCancelCaptureImage {
+    [self dismissModalViewControllerAnimated:YES];
+}
+
 -(void)didCaptureImage:(UIImage *)image {
     [self setVenueImage:image];
     
@@ -268,7 +269,7 @@
     checkInViewController.checkIn.userId = @"nenes";
     checkInViewController.checkIn.venue = [self getVenue:currentVenueIndexPath];
     [checkInViewController setDelegate:self];
-    [[self navigationController] pushViewController:checkInViewController animated:YES];
+    [modalNav pushViewController:checkInViewController animated:YES];
     [checkInViewController release];
 }
 
@@ -277,6 +278,6 @@
     POIViewController * poiController = [[POIViewController alloc] init];
     [poiController setVenue:[self getVenue:currentVenueIndexPath]];
     [poiController setVenueImage:[self venueImage]];
-    [self.navigationController pushViewController:poiController animated:YES];
+    [modalNav pushViewController:poiController animated:YES];
 }
 @end

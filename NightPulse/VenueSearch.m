@@ -36,6 +36,8 @@
     [operationQueue addOperation:endpoint];
     DebugLog(@"Added %@ to operation queue", endpoint);
     [endpoint release];
+    
+    NSLog(@"location: %@", location);
 }
 
 @end

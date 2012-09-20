@@ -65,6 +65,8 @@
     location.longitude = newLocation.coordinate.longitude;
     DebugLog(@"GOT LOCATION! %@", newLocation);
 
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"notification_didGetLocation" object:self userInfo:nil];
+
     [locationManager stopUpdatingLocation];
 
     [delegate onLocation:location];
