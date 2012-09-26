@@ -91,7 +91,7 @@
            withinKilometers:100];
     
     // Include the associated PFUser objects in the returned data
-    [wallPostQuery includeKey:@"userId"];
+    //[wallPostQuery includeKey:@"userId"];
     
     // Limit the number of wall posts returned to 20
     wallPostQuery.limit = 20;

@@ -9,6 +9,7 @@
 #import "NearbyViewController.h"
 #import "NightPulseAppDelegate.h"
 #import <Parse/Parse.h>
+#import "PulseAnnotation.h"
 
 @interface NearbyViewController ()
 
@@ -57,6 +58,11 @@
                                              selector:@selector(updateNearbyPulses) 
                                                  name:kNotificationPulseSent 
                                                object:nil];    // set initial default region for mapview
+    
+    CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(37.761317, -122.412593);
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(loc, 0.1*METERS_PER_MILE, 0.1*METERS_PER_MILE);
+    MKCoordinateRegion adjustedRegion = [_mapView regionThatFits:viewRegion];    
+    [_mapView setRegion:adjustedRegion animated:YES];
 }
 
 - (void)viewDidUnload
@@ -102,6 +108,8 @@
     } else {
         [venueSearch searchForSpecificVenuesNearby:self searchTerm:searchTerm];
     }
+    
+    [self updateNearbyPulses];
 }
 
 - (void)onNearestVenueResult:(NSMutableArray *)venues_ {
@@ -134,19 +142,25 @@
 
 -(void)updateNearbyPulses {
     CLLocation * location = [_mapView.userLocation location];
-//    CLLocationDistance radiusInMeters = 200;
     CLLocationAccuracy radiusInMeters = 200;
     NSString * parseQueryClassName = @"CheckIn"; 
     [ParseHelper queryNearLocation:location withNearbyDistance:radiusInMeters forClassName:parseQueryClassName withResultsBlock:^(NSArray *results) {
+        NSMutableArray * newAnnotations = [[NSMutableArray alloc] init];
         NSLog(@"Received %d results!", [results count]);
         for (PFObject * k in results) {
-            DebugLog(@"%@\n", k);
+            NSLog(@"New annotation: %@\n", k);
             NSString * objectID = [k objectId];
             if (![pulses objectForKey:objectID]) {
-                
+                PulseAnnotation * annotation = [[PulseAnnotation alloc] initWithPFObject:k];
+                [newAnnotations addObject:annotation];
+                [pulses setObject:annotation forKey:objectID];
             }
         }
-        NSLog(@"That's all folks");
+        NSLog(@"Adding %d new annotations!", [newAnnotations count]);
+        if ([newAnnotations count] > 0) {
+            [_mapView addAnnotations:newAnnotations];
+            [newAnnotations release];
+        }
     }];
 }
 
