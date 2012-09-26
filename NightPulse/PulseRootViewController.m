@@ -11,6 +11,7 @@
 #import "JSONKit.h"
 #import "NearbyVenueTableCell.h"
 #import "NightPulseAppDelegate.h"
+#import "NightPulseAppDelegate.h"
 
 //#import "TempController.h"
 @interface PulseRootViewController ()
@@ -266,8 +267,9 @@
     [self setVenueImage:image];
     
     CheckInViewController *checkInViewController = [[CheckInViewController alloc] init];
-    checkInViewController.checkIn.userId = @"nenes";
-    checkInViewController.checkIn.venue = [self getVenue:currentVenueIndexPath];
+    checkInViewController.checkIn.userId = @"bobo";
+    [checkInViewController setVenue:[self getVenue:currentVenueIndexPath]];
+//    NSLog(@"Checkin venue: %@ at location %@", checkInViewController.checkIn.venue, checkInViewController.checkIn.venue.location);
     [checkInViewController setDelegate:self];
     [modalNav pushViewController:checkInViewController animated:YES];
     [checkInViewController release];
@@ -275,9 +277,21 @@
 
 #pragma mark CheckInDelegate
 -(void)didCheckIn {
+#if 0
     POIViewController * poiController = [[POIViewController alloc] init];
     [poiController setVenue:[self getVenue:currentVenueIndexPath]];
     [poiController setVenueImage:[self venueImage]];
     [modalNav pushViewController:poiController animated:YES];
+#else
+    // dismiss whole pulse nav
+    [self performSelector:@selector(closePulseNav) withObject:self afterDelay:1];
+    [[NSNotificationCenter defaultCenter] postNotificationName: kNotificationPulseSent
+                                                        object:nil];
+#endif
+}
+
+-(void)closePulseNav {
+    [modalNav dismissModalViewControllerAnimated:YES];
+    [self.tabBarController setSelectedIndex:0]; // go to map
 }
 @end

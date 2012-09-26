@@ -14,7 +14,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setSelectedIndex:2];
+    [self setSelectedIndex:0];
 
     UIImage *buttonImage = [UIImage imageNamed:@"tab_pulse.png"];
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -25,12 +25,11 @@
 
     [button addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
 
-
-    CGFloat heightDifference = buttonImage.size.height - self.tabBar.frame.size.height;
+    // if we want a raised button, set heightDifference to nonzero
+    CGFloat heightDifference = 0; //buttonImage.size.height - self.tabBar.frame.size.height + 30;
     CGPoint center = self.tabBar.center;
-    center.y = center.y - heightDifference / 2.0 - 15;
+    center.y = center.y - heightDifference / 2.0;
     button.center = center;
-
     [self.view addSubview:button];
 
     UINavigationBar *navBar = [self.pulseNavController navigationBar];

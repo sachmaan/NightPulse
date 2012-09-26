@@ -42,5 +42,5 @@
 
 - (IBAction)checkIn:(id)sender;
 
-
+-(void)setVenue:(Venue*)venue;
 @end

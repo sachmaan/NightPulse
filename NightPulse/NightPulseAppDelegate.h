@@ -12,6 +12,8 @@
 #import "CurrentVenueCache.h"
 #import "VenueSearch.h"
 
+static NSString * const kNotificationPulseSent = @"kNotificationPulseSent";
+static NSString * const kNotificationDidGetLocation = @"kNotificationDidGetLocation";
 @interface NightPulseAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate, UINavigationControllerDelegate, NearestVenueResultDelegate>
 
 @property(nonatomic, retain) IBOutlet UIWindow *window;

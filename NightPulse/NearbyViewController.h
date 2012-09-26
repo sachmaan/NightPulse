@@ -13,6 +13,10 @@
 #import "VenueSearch.h"
 #import "NearestVenueResultDelegate.h"
 #import "CurrentVenueCache.h"
+#import "ParseHelper.h"
+
+#define METERS_PER_MILE 1609.344
+#define MILES_PER_DEGREE 69
 
 @interface NearbyViewController : UIViewController <NearestVenueResultDelegate, MKMapViewDelegate, UIScrollViewDelegate>
 
@@ -21,5 +25,6 @@
 @property (nonatomic, retain) NSMutableArray *venues;
 @property (nonatomic, retain) CurrentVenueCache *currentVenueCache;
 @property (nonatomic, retain) VenueSearch *venueSearch;
-
+@property (nonatomic, assign) BOOL isFirstUpdate;
+@property (nonatomic, retain) NSMutableDictionary * pulses;
 @end

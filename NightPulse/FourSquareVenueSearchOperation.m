@@ -134,6 +134,7 @@
         [venue setAddress:address];
         CLLocation * loc = [[CLLocation alloc] initWithLatitude:[lat floatValue] longitude:[lon floatValue]];
         [venue setLocation:loc];
+        NSLog(@"Venue location: %@", loc);
 
         [venueList addObject:venue];
         [venue release];

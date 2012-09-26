@@ -50,7 +50,6 @@
 		03A8A4AB141C79A600C45929 /* NightPulseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A8A4AA141C79A600C45929 /* NightPulseTests.m */; };
 		03A8A4B7141C7B6300C45929 /* CheckInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A8A4B5141C7B6300C45929 /* CheckInViewController.m */; };
 		03A8A4B8141C7B6300C45929 /* CheckInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A8A4B6141C7B6300C45929 /* CheckInViewController.xib */; };
-		03AAEE8714BD39A700F179E6 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03AAEE8614BD39A700F179E6 /* Parse.framework */; };
 		03AAEE8B14BE825800F179E6 /* LabelMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 03AAEE8A14BE825800F179E6 /* LabelMaker.m */; };
 		03AAEE8D14BE8C1500F179E6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03AAEE8C14BE8C1400F179E6 /* CoreLocation.framework */; };
 		03AAEE8E14C5092800F179E6 /* JSONKit.h in Sources */ = {isa = PBXBuildFile; fileRef = 03D3D3A014254AE4008916BC /* JSONKit.h */; };
@@ -117,6 +116,11 @@
 		9E6EAB8215F02B3D00B630B5 /* nightpulse_icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAB8115F02B3D00B630B5 /* nightpulse_icon_57.png */; };
 		9E6EAB8415F02B4600B630B5 /* nightpulse_icon_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAB8315F02B4600B630B5 /* nightpulse_icon_114.png */; };
 		9E86801516011C5100911485 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E86801416011C5000911485 /* Crashlytics.framework */; };
+		9E935F171613792500503191 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E935F161613792500503191 /* Parse.framework */; };
+		9E935F1B1613796700503191 /* ParseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E935F1A1613796700503191 /* ParseHelper.m */; };
+		9E935F6116137FA800503191 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E935F6016137FA800503191 /* libsqlite3.dylib */; };
+		9E935F6316137FBA00503191 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E935F6216137FBA00503191 /* StoreKit.framework */; };
+		9E935F6A161387E600503191 /* PulseAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E935F69161387E600503191 /* PulseAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,7 +198,6 @@
 		03A8A4B4141C7B6200C45929 /* CheckInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckInViewController.h; sourceTree = "<group>"; };
 		03A8A4B5141C7B6300C45929 /* CheckInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckInViewController.m; sourceTree = "<group>"; };
 		03A8A4B6141C7B6300C45929 /* CheckInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CheckInViewController.xib; sourceTree = "<group>"; };
-		03AAEE8614BD39A700F179E6 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		03AAEE8914BE825800F179E6 /* LabelMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelMaker.h; sourceTree = "<group>"; };
 		03AAEE8A14BE825800F179E6 /* LabelMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelMaker.m; sourceTree = "<group>"; };
 		03AAEE8C14BE8C1400F179E6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -286,6 +289,13 @@
 		9E6EAB8115F02B3D00B630B5 /* nightpulse_icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nightpulse_icon_57.png; sourceTree = "<group>"; };
 		9E6EAB8315F02B4600B630B5 /* nightpulse_icon_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nightpulse_icon_114.png; sourceTree = "<group>"; };
 		9E86801416011C5000911485 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		9E935F161613792500503191 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		9E935F191613796700503191 /* ParseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseHelper.h; sourceTree = "<group>"; };
+		9E935F1A1613796700503191 /* ParseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseHelper.m; sourceTree = "<group>"; };
+		9E935F6016137FA800503191 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		9E935F6216137FBA00503191 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		9E935F68161387E600503191 /* PulseAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseAnnotation.h; sourceTree = "<group>"; };
+		9E935F69161387E600503191 /* PulseAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulseAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +303,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E935F6316137FBA00503191 /* StoreKit.framework in Frameworks */,
+				9E935F6116137FA800503191 /* libsqlite3.dylib in Frameworks */,
 				9E6EAB7E15F027ED00B630B5 /* ImageIO.framework in Frameworks */,
 				9E6EAB7B15F0277900B630B5 /* AVFoundation.framework in Frameworks */,
 				9E6EAB7915F026E000B630B5 /* CoreMedia.framework in Frameworks */,
@@ -310,8 +322,8 @@
 				03A8A475141C79A600C45929 /* UIKit.framework in Frameworks */,
 				03A8A477141C79A600C45929 /* Foundation.framework in Frameworks */,
 				03A8A479141C79A600C45929 /* CoreGraphics.framework in Frameworks */,
-				03AAEE8714BD39A700F179E6 /* Parse.framework in Frameworks */,
 				9E86801516011C5100911485 /* Crashlytics.framework in Frameworks */,
+				9E935F171613792500503191 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,6 +455,8 @@
 				0392A905143AAC9D00F0E307 /* ExploreTableCell.h */,
 				0392A906143AAC9D00F0E307 /* ExploreTableCell.m */,
 				0392A907143AAC9D00F0E307 /* ExploreTableCell.xib */,
+				9E935F68161387E600503191 /* PulseAnnotation.h */,
+				9E935F69161387E600503191 /* PulseAnnotation.m */,
 			);
 			name = Explore;
 			sourceTree = "<group>";
@@ -450,6 +464,8 @@
 		03A8A465141C79A500C45929 = {
 			isa = PBXGroup;
 			children = (
+				9E935F6216137FBA00503191 /* StoreKit.framework */,
+				9E935F6016137FA800503191 /* libsqlite3.dylib */,
 				03867386160914080082EC90 /* Andala.gpx */,
 				03FE24951606D6A000CA2C39 /* Default@2x.png */,
 				03FE24931606D69500CA2C39 /* Default.png */,
@@ -490,7 +506,7 @@
 		03A8A473141C79A600C45929 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				03AAEE8614BD39A700F179E6 /* Parse.framework */,
+				9E935F161613792500503191 /* Parse.framework */,
 				03A8A474141C79A600C45929 /* UIKit.framework */,
 				03A8A476141C79A600C45929 /* Foundation.framework */,
 				03A8A478141C79A600C45929 /* CoreGraphics.framework */,
@@ -554,6 +570,7 @@
 		03D3D36B14253805008916BC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9E935F181613794E00503191 /* ParseHelper */,
 				03FE24841606D5B300CA2C39 /* UIImage-Categories */,
 				9E10B57E15EF576200CC001F /* POI */,
 				0346A83C144E464E009E8E06 /* Tab */,
@@ -697,6 +714,15 @@
 				9E10B58215EF578100CC001F /* POIViewController.xib */,
 			);
 			name = POI;
+			sourceTree = "<group>";
+		};
+		9E935F181613794E00503191 /* ParseHelper */ = {
+			isa = PBXGroup;
+			children = (
+				9E935F191613796700503191 /* ParseHelper.h */,
+				9E935F1A1613796700503191 /* ParseHelper.m */,
+			);
+			name = ParseHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -901,6 +927,8 @@
 				03FE248D1606D5D000CA2C39 /* UIImage+Resize.m in Sources */,
 				03FE248E1606D5D000CA2C39 /* UIImage+RoundedCorner.m in Sources */,
 				9E022D341608EE2200771BBB /* NearbyViewController.m in Sources */,
+				9E935F1B1613796700503191 /* ParseHelper.m in Sources */,
+				9E935F6A161387E600503191 /* PulseAnnotation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

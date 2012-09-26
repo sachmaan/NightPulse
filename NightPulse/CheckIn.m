@@ -17,6 +17,7 @@
 @synthesize lineRatio;
 @synthesize coverCharge;
 @synthesize age;
+@synthesize pfGeoPoint;
 
 - (id)init {
     self = [super init];
@@ -43,7 +44,7 @@
     [venueCheckIn setObject:self.crowdRatio forKey:@"crowd"];
     [venueCheckIn setObject:self.lineRatio forKey:@"line"];
     [venueCheckIn setObject:self.coverCharge forKey:@"cover"];
-
+    [venueCheckIn setObject:self.pfGeoPoint forKey:@"pfGeoPoint"];
 
     return venueCheckIn;
 }
@@ -59,6 +60,7 @@
     self.lineRatio = [pObject objectForKey:@"line"];
     self.coverCharge = [pObject objectForKey:@"cover"];
 
+    self.pfGeoPoint = [pObject objectForKey:@"pfGeoPoint"];
     return self;
 }
 
