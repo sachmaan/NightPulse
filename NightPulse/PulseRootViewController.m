@@ -97,7 +97,9 @@
 - (Venue *)getVenue:(NSIndexPath *)indexPath {
     NightPulseAppDelegate * appDelegate = (NightPulseAppDelegate*)[UIApplication sharedApplication].delegate;
     NSArray * venues = [appDelegate getVenues];
-    return ((Venue *) [venues objectAtIndex:indexPath.row]);
+    int index = indexPath.row;
+    NSLog(@"Returning venue at index %d", index);
+    return ((Venue *) [venues objectAtIndex:index]);
 }
 
 - (void)refresh:(NSString *)searchTerm {
@@ -160,8 +162,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
     [self setCurrentVenueIndexPath:indexPath];
+    NSLog(@"Selecting and saving index path: %@", indexPath);
     CameraViewController * camera = [[CameraViewController alloc] init];
     [camera setDelegate:self];
     //[self.navigationController pushViewController:camera animated:YES];
@@ -268,8 +270,8 @@
     
     CheckInViewController *checkInViewController = [[CheckInViewController alloc] init];
     checkInViewController.checkIn.userId = @"bobo";
+    NSLog(@"indexPath: %@ venue: %@", currentVenueIndexPath, [self getVenue:currentVenueIndexPath]);
     [checkInViewController setVenue:[self getVenue:currentVenueIndexPath]];
-//    NSLog(@"Checkin venue: %@ at location %@", checkInViewController.checkIn.venue, checkInViewController.checkIn.venue.location);
     [checkInViewController setDelegate:self];
     [modalNav pushViewController:checkInViewController animated:YES];
     [checkInViewController release];
