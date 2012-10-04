@@ -31,6 +31,14 @@
     return self;
 }
 
+-(id)initWithPFObject:(PFObject *)object {
+    self = [super init];
+    if (self) {
+        self = [self fromPFObject:object];
+    }
+    return self;
+}
+
 //- (NSString *)description {
 //    return [NSString stringWithFormat:@"CheckIn: UserId=%@ SexRatio=%@ CrowdRatio=%@",name,author];
 //}
