@@ -9,10 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 #import <Parse/Parse.h>
+#import "PulseAnnotation.h"
+#import "Venue.h"
 #import "NPAnnotation.h"
 
-@interface PulseAnnotation : NPAnnotation
+@interface VenueAnnotation : NPAnnotation //NSObject <MKAnnotation>
 
-@property (nonatomic, readonly, strong) PFUser *user;
+@property (nonatomic, readonly, strong) Venue * venue;
+
+- (id)initWithVenue:(Venue *)_venue;
 
 @end
