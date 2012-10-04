@@ -10,6 +10,8 @@
 #import "NightPulseAppDelegate.h"
 #import <Parse/Parse.h>
 #import "PulseAnnotation.h"
+#import "POIViewController.h"
+#import "VenueAnnotation.h"
 
 @interface NearbyViewController ()
 
@@ -42,6 +44,7 @@
     
     isFirstUpdate = YES;
     
+    venues = [[NSMutableDictionary alloc] init];
     pulses = [[NSMutableDictionary alloc] init];
     
     [[NSNotificationCenter defaultCenter] addObserver:self 
@@ -95,9 +98,9 @@
 
 #pragma Helper
 
-- (Venue *)getVenue:(NSIndexPath *)indexPath {
-    return ((Venue *) [venues objectAtIndex:indexPath.row]);
-}
+//- (Venue *)getVenue:(NSIndexPath *)indexPath {
+//    return ((Venue *) [venues objectAtIndex:indexPath.row]);
+//}
 
 
 - (void)refresh:(NSString *)searchTerm {
@@ -114,20 +117,40 @@
 
 - (void)onNearestVenueResult:(NSMutableArray *)venues_ {
     DebugLog(@"calling onNearestVenueResult");
-    [venues_ retain];
-    if (nil != venues)
-        [venues release];
-    venues = venues_;
-    NSLog(@"Venues: %@", venues);
-    
-//    [self.tableView reloadData];
+    NSMutableArray * newAnnotations = [[NSMutableArray alloc] init];
+    for (Venue * v in venues_) {
+        NSString * venueID = [v venueId];
+        if ([venues objectForKey:venueID] == nil) {
+            VenueAnnotation * annotation = [[VenueAnnotation alloc] initWithVenue:v];
+            [newAnnotations addObject:annotation];
+            [venues setObject:annotation forKey:venueID];
+        }
+    }
+    NSLog(@"Adding %d new annotations!", [newAnnotations count]);
+    if ([newAnnotations count] > 0) {
+        [_mapView addAnnotations:newAnnotations];
+        [newAnnotations release];
+    }
 }
 
 - (void)onNearestVenueSearchResult:(NSMutableArray *)venues_ {
     DebugLog(@"calling onNearestVenueSearchResult");
-    venues = venues_;
-//    [self.tableView reloadData];
-    NSLog(@"Venues: %@", venues);
+    //venues = venues_;
+    NSMutableArray * newAnnotations = [[NSMutableArray alloc] init];
+    for (Venue * v in venues_) {
+        NSString * venueID = [v venueId];
+        if ([venues objectForKey:venueID] == nil) {
+            VenueAnnotation * annotation = [[VenueAnnotation alloc] initWithVenue:v];
+            [newAnnotations addObject:annotation];
+            [venues setObject:annotation forKey:venueID];
+        }
+    }
+    NSLog(@"Adding %d new annotations!", [newAnnotations count]);
+    if ([newAnnotations count] > 0) {
+        [_mapView addAnnotations:newAnnotations];
+        [newAnnotations release];
+    }
+//    NSLog(@"Venues: %@", venues);
 }
 
 -(void)updateLocation {
@@ -186,35 +209,38 @@
         [_mapView setRegion:adjustedRegion animated:YES];
     }
 }
-/*
 -(void) mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view {
-    if (view.annotation == gymCenter) {
-        view.selected = YES;
-    }
 }
 
 -(void) mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view   {
-    if (view.annotation != gymCenter) {
-        view.selected = NO;
-        annotationView.selected = YES;
+    id<MKAnnotation> annotation = [view annotation];
+    if ([annotation isKindOfClass:[PulseAnnotation class]]) {
+        PulseAnnotation * p = (PulseAnnotation*)annotation;
+        //NSString * key = [p.object objectID];
+        
+        // display POIview
     }
 }
+/*
 -(void) recenterPlacemark {
     [gymCenter setCoordinate:_mapView.userLocation.coordinate];
 }
+ */
+
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
-    static NSString *identifier = @"MyLocation";   
-    if ([annotation isKindOfClass:[Annotation class]]) {
+    if ([annotation isKindOfClass:[PulseAnnotation class]]) {
+        static NSString *identifier = @"PulseAnnotationPin";
         Annotation *location = (Annotation *) annotation;
         
-        annotationView = (MKAnnotationView *) [_mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+        MKAnnotationView * annotationView = (MKAnnotationView *) [_mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
         if (annotationView == nil) {
             annotationView = [[[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier] autorelease];
         } 
         else {
             annotationView.annotation = annotation;
         }
-        UIImage *image = [UIImage imageNamed: @"mapmarkergp"];
+        
+        UIImage *image = [UIImage imageNamed: @"pin"];
         annotationView.image = image;
         UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
         [annotationView addSubview:imageView];
@@ -226,9 +252,34 @@
         annotationView.selected = YES;
         return annotationView;
     }
-    return nil;    
+    else if ([annotation isKindOfClass:[VenueAnnotation class]]) {
+        static NSString *identifier = @"VenueAnnotationPin";
+        Annotation *location = (Annotation *) annotation;
+        
+        MKAnnotationView * annotationView = (MKAnnotationView *) [_mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+        if (annotationView == nil) {
+            annotationView = [[[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier] autorelease];
+        }
+        else {
+            annotationView.annotation = annotation;
+        }
+        
+        UIImage *image = [UIImage imageNamed: @"pin"];
+        annotationView.image = image;
+        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
+        [annotationView addSubview:imageView];
+        [imageView release];
+        annotationView.annotation = location;
+        annotationView.draggable = YES;
+        annotationView.enabled = YES;
+        annotationView.canShowCallout = NO;
+        annotationView.selected = YES;
+        return annotationView;
+    }
+    return nil;
 }
 
+/*
 -(void) mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view didChangeDragState:(MKAnnotationViewDragState)newState fromOldState:(MKAnnotationViewDragState)oldState {
     if (((Annotation*) view.annotation).coordinate.latitude > mapView.region.center.latitude + 0.5*mapView.region.span.latitudeDelta) {
         [((Annotation*) view.annotation) setCoordinate:CLLocationCoordinate2DMake(mapView.region.center.latitude +0.4*mapView.region.span.latitudeDelta, ((Annotation *) view.annotation).coordinate.longitude)];
