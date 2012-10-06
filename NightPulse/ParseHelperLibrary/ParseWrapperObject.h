@@ -6,14 +6,15 @@
 //  Copyright 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import "Parse/Parse.h"
+#import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
 @protocol PFObjectFactory
 
 - (PFObject *)toPFObject;
-
 - (id)fromPFObject:(PFObject *)obj;
+- (id)initWithPFObject:(PFObject *)object;
 
+@property (nonatomic, retain) NSString * className;
 
 @end
-
