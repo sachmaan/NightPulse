@@ -20,6 +20,10 @@
 		0346A842144E46AD009E8E06 /* PulseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346A841144E46AD009E8E06 /* PulseTabBarController.m */; };
 		0346A844144E54A9009E8E06 /* btn_sendpulse.png in Resources */ = {isa = PBXBuildFile; fileRef = 0346A843144E54A9009E8E06 /* btn_sendpulse.png */; };
 		03867387160914080082EC90 /* Andala.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 03867386160914080082EC90 /* Andala.gpx */; };
+		038F55A31620BC82002CC6BD /* FeedTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 038F559E1620BC82002CC6BD /* FeedTableCell.m */; };
+		038F55A41620BC82002CC6BD /* FeedTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038F559F1620BC82002CC6BD /* FeedTableCell.xib */; };
+		038F55A51620BC82002CC6BD /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 038F55A11620BC82002CC6BD /* FeedViewController.m */; };
+		038F55A61620BC82002CC6BD /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038F55A21620BC82002CC6BD /* FeedViewController.xib */; };
 		0392017E142EE0F300A06595 /* NearbyVenueTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0392017D142EE0F300A06595 /* NearbyVenueTableCell.xib */; };
 		03920181142EE6C900A06595 /* NearbyVenueTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03920180142EE6C900A06595 /* NearbyVenueTableCell.m */; };
 		0392A8FA143AA7F300F0E307 /* NightPulseNavBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0392A8F9143AA7F300F0E307 /* NightPulseNavBar.png */; };
@@ -33,9 +37,7 @@
 		03A8A485141C79A600C45929 /* NightPulseAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A8A484141C79A600C45929 /* NightPulseAppDelegate.m */; };
 		03A8A488141C79A600C45929 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A8A486141C79A600C45929 /* MainWindow.xib */; };
 		03A8A48B141C79A600C45929 /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A8A48A141C79A600C45929 /* ExploreViewController.m */; };
-		03A8A48E141C79A600C45929 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A8A48D141C79A600C45929 /* FeedViewController.m */; };
 		03A8A491141C79A600C45929 /* ExploreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A8A48F141C79A600C45929 /* ExploreViewController.xib */; };
-		03A8A494141C79A600C45929 /* FeedView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A8A492141C79A600C45929 /* FeedView.xib */; };
 		03A8A49C141C79A600C45929 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A8A49B141C79A600C45929 /* SenTestingKit.framework */; };
 		03A8A49D141C79A600C45929 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A8A474141C79A600C45929 /* UIKit.framework */; };
 		03A8A49E141C79A600C45929 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A8A476141C79A600C45929 /* Foundation.framework */; };
@@ -163,6 +165,12 @@
 		0346A841144E46AD009E8E06 /* PulseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulseTabBarController.m; sourceTree = "<group>"; };
 		0346A843144E54A9009E8E06 /* btn_sendpulse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_sendpulse.png; sourceTree = "<group>"; };
 		03867386160914080082EC90 /* Andala.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Andala.gpx; sourceTree = "<group>"; };
+		038F559D1620BC82002CC6BD /* FeedTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableCell.h; sourceTree = "<group>"; };
+		038F559E1620BC82002CC6BD /* FeedTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableCell.m; sourceTree = "<group>"; };
+		038F559F1620BC82002CC6BD /* FeedTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedTableCell.xib; sourceTree = "<group>"; };
+		038F55A01620BC82002CC6BD /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		038F55A11620BC82002CC6BD /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		038F55A21620BC82002CC6BD /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
 		0392017D142EE0F300A06595 /* NearbyVenueTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyVenueTableCell.xib; sourceTree = "<group>"; };
 		0392017F142EE6C900A06595 /* NearbyVenueTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyVenueTableCell.h; sourceTree = "<group>"; };
 		03920180142EE6C900A06595 /* NearbyVenueTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyVenueTableCell.m; sourceTree = "<group>"; };
@@ -183,10 +191,7 @@
 		03A8A487141C79A600C45929 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		03A8A489141C79A600C45929 /* ExploreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
 		03A8A48A141C79A600C45929 /* ExploreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExploreViewController.m; sourceTree = "<group>"; };
-		03A8A48C141C79A600C45929 /* FeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
-		03A8A48D141C79A600C45929 /* FeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		03A8A490141C79A600C45929 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ExploreViewController.xib; sourceTree = "<group>"; };
-		03A8A493141C79A600C45929 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/FeedView.xib; sourceTree = "<group>"; };
 		03A8A49A141C79A600C45929 /* NightPulseTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NightPulseTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03A8A49B141C79A600C45929 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		03A8A4A4141C79A600C45929 /* NightPulseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NightPulseTests-Info.plist"; sourceTree = "<group>"; };
@@ -403,6 +408,19 @@
 			name = Tab;
 			sourceTree = "<group>";
 		};
+		038F559B1620BC57002CC6BD /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				038F559D1620BC82002CC6BD /* FeedTableCell.h */,
+				038F559E1620BC82002CC6BD /* FeedTableCell.m */,
+				038F559F1620BC82002CC6BD /* FeedTableCell.xib */,
+				038F55A01620BC82002CC6BD /* FeedViewController.h */,
+				038F55A11620BC82002CC6BD /* FeedViewController.m */,
+				038F55A21620BC82002CC6BD /* FeedViewController.xib */,
+			);
+			name = Feed;
+			sourceTree = "<group>";
+		};
 		0392A8F0143A9E5700F0E307 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,7 +554,6 @@
 				03C33449142AB99500E5E2AB /* CoreData */,
 				03D3D37D14254AE4008916BC /* morsels */,
 				03D3D36B14253805008916BC /* Classes */,
-				03A8A492141C79A600C45929 /* FeedView.xib */,
 				03A8A486141C79A600C45929 /* MainWindow.xib */,
 				03A8A47B141C79A600C45929 /* Supporting Files */,
 			);
@@ -585,6 +602,7 @@
 		03D3D36B14253805008916BC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				038F559B1620BC57002CC6BD /* Feed */,
 				9E203E4D161DF95900416C46 /* ParseHelperLibrary */,
 				03FE24841606D5B300CA2C39 /* UIImage-Categories */,
 				9E10B57E15EF576200CC001F /* POI */,
@@ -594,8 +612,6 @@
 				03130131142C309700367E8C /* Model */,
 				03D3D3761425417B008916BC /* FourSquareApi */,
 				03D3D36C14253D23008916BC /* Pulse */,
-				03A8A48C141C79A600C45929 /* FeedViewController.h */,
-				03A8A48D141C79A600C45929 /* FeedViewController.m */,
 				03A8A483141C79A600C45929 /* NightPulseAppDelegate.h */,
 				03A8A484141C79A600C45929 /* NightPulseAppDelegate.m */,
 				9E10B59515EF5C5000CC001F /* EGORefreshTableHeaderView.h */,
@@ -817,7 +833,6 @@
 				03A8A47F141C79A600C45929 /* InfoPlist.strings in Resources */,
 				03A8A488141C79A600C45929 /* MainWindow.xib in Resources */,
 				03A8A491141C79A600C45929 /* ExploreViewController.xib in Resources */,
-				03A8A494141C79A600C45929 /* FeedView.xib in Resources */,
 				03A8A4B8141C7B6300C45929 /* CheckInViewController.xib in Resources */,
 				03D3D37114254020008916BC /* PulseRootViewController.xib in Resources */,
 				0313013C142C481A00367E8C /* Entitlements.entitlements in Resources */,
@@ -859,6 +874,8 @@
 				9E80083316194C84003E9B16 /* slider.png in Resources */,
 				9E80083A16194CBF003E9B16 /* pin.png in Resources */,
 				9E80083B16194CBF003E9B16 /* pin@2x.png in Resources */,
+				038F55A41620BC82002CC6BD /* FeedTableCell.xib in Resources */,
+				038F55A61620BC82002CC6BD /* FeedViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -912,7 +929,6 @@
 				03A8A481141C79A600C45929 /* main.m in Sources */,
 				03A8A485141C79A600C45929 /* NightPulseAppDelegate.m in Sources */,
 				03A8A48B141C79A600C45929 /* ExploreViewController.m in Sources */,
-				03A8A48E141C79A600C45929 /* FeedViewController.m in Sources */,
 				03A8A4B7141C7B6300C45929 /* CheckInViewController.m in Sources */,
 				03D3D36F14253D79008916BC /* PulseRootViewController.m in Sources */,
 				03D3D3A214254AE4008916BC /* ASIAuthenticationDialog.m in Sources */,
@@ -951,6 +967,8 @@
 				9E8008411619507F003E9B16 /* NPAnnotation.m in Sources */,
 				9E203E55161DF95900416C46 /* ParseHelper.m in Sources */,
 				9E203E56161DF95900416C46 /* ParseUserInfo.m in Sources */,
+				038F55A31620BC82002CC6BD /* FeedTableCell.m in Sources */,
+				038F55A51620BC82002CC6BD /* FeedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -996,14 +1014,6 @@
 				03A8A490141C79A600C45929 /* en */,
 			);
 			name = ExploreViewController.xib;
-			sourceTree = "<group>";
-		};
-		03A8A492141C79A600C45929 /* FeedView.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				03A8A493141C79A600C45929 /* en */,
-			);
-			name = FeedView.xib;
 			sourceTree = "<group>";
 		};
 		03A8A4A5141C79A600C45929 /* InfoPlist.strings */ = {

@@ -58,9 +58,6 @@
 
 -(void)setVenue:(Venue *)venue {
     self.checkIn.venue = venue;
-    self.checkIn.pfGeoPoint = [PFGeoPoint geoPointWithLatitude:self.checkIn.venue.location.coordinate.latitude longitude:self.checkIn.venue.location.coordinate.longitude];
-    
-    //DebugLog(@"Checkin has venue: %@ %@", self.checkIn.venue, self.checkIn.venue.location);
 }
 
 - (void)didReceiveMemoryWarning {

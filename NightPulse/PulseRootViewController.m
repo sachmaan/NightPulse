@@ -270,6 +270,7 @@
     
     CheckInViewController *checkInViewController = [[CheckInViewController alloc] init];
     checkInViewController.checkIn.userId = @"bobo";
+    checkInViewController.checkIn.pulseImage = image;
     NSLog(@"indexPath: %@ venue: %@", currentVenueIndexPath, [self getVenue:currentVenueIndexPath]);
     [checkInViewController setVenue:[self getVenue:currentVenueIndexPath]];
     [checkInViewController setDelegate:self];
