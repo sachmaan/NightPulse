@@ -9,17 +9,17 @@
 #import <Foundation/Foundation.h>
 #import "NearestVenueResultDelegate.h"
 #import "PulseRootViewController.h"
-#import "Location.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface FourSquareVenueSearchOperation : NSOperation {
-    Location *location;
+    CLLocation *location;
     id <NearestVenueResultDelegate> delegate;
     NSString *searchTerm;
 }
 
 //- (NSMutableArray* ) doVenueQuery:(double)latitude longitude:(double)longitude;
 
-- (id)initWithLocation:(Location *)location searchTerm:(NSString *)searchTerm venueListEventDelegate:(id <NearestVenueResultDelegate>)delegate;
+- (id)initWithLocation:(CLLocation *)location searchTerm:(NSString *)searchTerm venueListEventDelegate:(id <NearestVenueResultDelegate>)delegate;
 
 - (void)doVenueQuery;
 

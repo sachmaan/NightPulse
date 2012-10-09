@@ -39,7 +39,7 @@
     // Do any additional setup after loading the view from its nib.
     DebugLog(@"Loading Pulse Root");
     currentVenueCache = [CurrentVenueCache getCache];
-    [currentVenueCache registerDelegate:self];
+//    [currentVenueCache registerDelegate:self];
     venueSearch = [[VenueSearch alloc] init];
     
     isFirstUpdate = YES;
@@ -47,13 +47,13 @@
     venues = [[NSMutableDictionary alloc] init];
     pulses = [[NSMutableDictionary alloc] init];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self 
-                                             selector:@selector(updateLocation) 
-                                                 name:kNotificationDidGetLocation
-                                               object:nil];
+//    [[NSNotificationCenter defaultCenter] addObserver:self 
+//                                             selector:@selector(updateLocation) 
+//                                                 name:kNotificationDidGetLocation
+//                                               object:nil];
 
     [[NSNotificationCenter defaultCenter] addObserver:self 
-                                             selector:@selector(updateNearbyVenues) 
+                                             selector:@selector(updateNearbyPulses)
                                                  name:kNotificationDidGetLocation 
                                                object:nil];
 
@@ -61,6 +61,11 @@
                                              selector:@selector(updateNearbyPulses) 
                                                  name:kNotificationPulseSent 
                                                object:nil];    // set initial default region for mapview
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updateNearbyVenues)
+                                                 name:kNotificationReceivedVenues
+                                               object:nil];
     
     CLLocationCoordinate2D loc = CLLocationCoordinate2DMake(37.761317, -122.412593);
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(loc, 0.1*METERS_PER_MILE, 0.1*METERS_PER_MILE);
@@ -106,35 +111,63 @@
 - (void)refresh:(NSString *)searchTerm {
     
     DebugLog(@"Calling refresh");
-    if (nil == searchTerm) {
-        [currentVenueCache findNearestVenues:self];
-    } else {
-        [venueSearch searchForSpecificVenuesNearby:self searchTerm:searchTerm];
-    }
+//    if (nil == searchTerm) {
+//        [currentVenueCache findNearestVenues:self];
+//    } else {
+//        [venueSearch searchForSpecificVenuesNearby:self searchTerm:searchTerm];
+//    }
     
     [self updateNearbyPulses];
 }
 
-- (void)onNearestVenueResult:(NSMutableArray *)venues_ {
-    DebugLog(@"calling onNearestVenueResult");
-    NSMutableArray * newAnnotations = [[NSMutableArray alloc] init];
-    for (Venue * v in venues_) {
-        NSString * venueID = [v venueId];
-        if ([venues objectForKey:venueID] == nil) {
-            VenueAnnotation * annotation = [[VenueAnnotation alloc] initWithVenue:v];
-            [newAnnotations addObject:annotation];
-            [venues setObject:annotation forKey:venueID];
-        }
-    }
-    NSLog(@"Adding %d new annotations!", [newAnnotations count]);
-    if ([newAnnotations count] > 0) {
-        [_mapView addAnnotations:newAnnotations];
-        [newAnnotations release];
-    }
+//- (void)onNearestVenueResult:(NSMutableArray *)venues_ {
+//    DebugLog(@"calling onNearestVenueResult");
+//    NSMutableArray * newAnnotations = [[NSMutableArray alloc] init];
+//    for (Venue * v in venues_) {
+//        NSString * venueID = [v venueId];
+//        if ([venues objectForKey:venueID] == nil) {
+//            VenueAnnotation * annotation = [[VenueAnnotation alloc] initWithVenue:v];
+//            [newAnnotations addObject:annotation];
+//            [venues setObject:annotation forKey:venueID];
+//        }
+//    }
+//    NSLog(@"Adding %d new annotations!", [newAnnotations count]);
+//    if ([newAnnotations count] > 0) {
+//        [_mapView addAnnotations:newAnnotations];
+//        [newAnnotations release];
+//    }
+//}
+
+//- (void)onNearestVenueSearchResult:(NSMutableArray *)venues_ {
+//    DebugLog(@"calling onNearestVenueSearchResult");
+//    //venues = venues_;
+//    NSMutableArray * newAnnotations = [[NSMutableArray alloc] init];
+//    for (Venue * v in venues_) {
+//        NSString * venueID = [v venueId];
+//        if ([venues objectForKey:venueID] == nil) {
+//            VenueAnnotation * annotation = [[VenueAnnotation alloc] initWithVenue:v];
+//            [newAnnotations addObject:annotation];
+//            [venues setObject:annotation forKey:venueID];
+//        }
+//    }
+//    NSLog(@"Adding %d new annotations!", [newAnnotations count]);
+//    if ([newAnnotations count] > 0) {
+//        [_mapView addAnnotations:newAnnotations];
+//        [newAnnotations release];
+//    }
+//    NSLog(@"Venues: %@", venues);
+//}
+
+-(void)updateLocation {
+    NSLog(@"UpdateLocation");
+    // update venues etc
+//    [self centerOnUser];
 }
 
-- (void)onNearestVenueSearchResult:(NSMutableArray *)venues_ {
-    DebugLog(@"calling onNearestVenueSearchResult");
+-(void)updateNearbyVenues {
+    NightPulseAppDelegate * appDelegate = (NightPulseAppDelegate*)[UIApplication sharedApplication].delegate;
+    NSArray *venues_ = [appDelegate getVenues];
+    DebugLog(@"calling updateNearbyVenues");
     //venues = venues_;
     NSMutableArray * newAnnotations = [[NSMutableArray alloc] init];
     for (Venue * v in venues_) {
@@ -150,16 +183,6 @@
         [_mapView addAnnotations:newAnnotations];
         [newAnnotations release];
     }
-//    NSLog(@"Venues: %@", venues);
-}
-
--(void)updateLocation {
-    NSLog(@"UpdateLocation");
-    // update venues etc
-//    [self centerOnUser];
-}
-
--(void)updateNearbyVenues {
     
 }
 

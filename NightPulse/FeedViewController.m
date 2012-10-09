@@ -11,6 +11,7 @@
 #import "FeedTableCell.h"
 #import "CheckIn.h"
 #import "LabelMaker.h"
+#import "NightPulseAppDelegate.h"
 
 @interface FeedViewController ()
 
@@ -18,14 +19,18 @@
 
 @implementation FeedViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
+
+- (void) dealloc
 {
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+    [super dealloc];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:kNotificationDidGetLocation
+                                                  object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:kNotificationPulseSent
+                                                  object:nil];
 }
+
 
 - (void)viewDidLoad
 {
@@ -33,6 +38,17 @@
     DebugLog(@"FeedViewController loaded");
 
     pulses = [[NSMutableArray alloc] initWithCapacity:0];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(findPulses)
+                                                 name:kNotificationDidGetLocation
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(findPulses)
+                                                 name:kNotificationPulseSent
+                                               object:nil]; 
+
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -130,30 +146,10 @@
 
 #pragma mark - Other methods
 
--(void)updateNearbyPulses {
-/*
-    CLLocation * location = [_mapView.userLocation location];
-    //    CLLocationDistance radiusInMeters = 200;
-    CLLocationAccuracy radiusInMeters = 200;
-    NSString * parseQueryClassName = @"CheckIn";
-    [ParseHelper queryNearLocation:location withNearbyDistance:radiusInMeters forClassName:parseQueryClassName withResultsBlock:^(NSArray *results) {
-        NSLog(@"Received %d results!", [results count]);
-        for (PFObject * k in results) {
-            DebugLog(@"%@\n", k);
-            NSString * objectID = [k objectId];
-            if (![pulses objectForKey:objectID]) {
-                
-            }
-        }
-        NSLog(@"That's all folks");
-    }];
- */
-    
-}
-
 - (void)findPulses {
+    DebugLog(@"findPulses called");
     
-    CLLocation *location = [[CLLocation alloc] initWithLatitude:37.78583400 longitude:-122.40641700];
+    CLLocation *location = ((NightPulseAppDelegate*) [UIApplication sharedApplication].delegate).location;
     CLLocationAccuracy radiusInMeters = 200;
     NSString * parseQueryClassName = @"CheckIn";
     
@@ -176,10 +172,8 @@
         [self.tableView reloadData];
     }
      ];
-
-    
-    
 }
+
 
 
 

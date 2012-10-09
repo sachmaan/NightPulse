@@ -27,8 +27,6 @@
 		0392017E142EE0F300A06595 /* NearbyVenueTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0392017D142EE0F300A06595 /* NearbyVenueTableCell.xib */; };
 		03920181142EE6C900A06595 /* NearbyVenueTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03920180142EE6C900A06595 /* NearbyVenueTableCell.m */; };
 		0392A8FA143AA7F300F0E307 /* NightPulseNavBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0392A8F9143AA7F300F0E307 /* NightPulseNavBar.png */; };
-		0392A908143AAC9D00F0E307 /* ExploreTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0392A906143AAC9D00F0E307 /* ExploreTableCell.m */; };
-		0392A909143AAC9D00F0E307 /* ExploreTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0392A907143AAC9D00F0E307 /* ExploreTableCell.xib */; };
 		03A8A475141C79A600C45929 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A8A474141C79A600C45929 /* UIKit.framework */; };
 		03A8A477141C79A600C45929 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A8A476141C79A600C45929 /* Foundation.framework */; };
 		03A8A479141C79A600C45929 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A8A478141C79A600C45929 /* CoreGraphics.framework */; };
@@ -36,8 +34,6 @@
 		03A8A481141C79A600C45929 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A8A480141C79A600C45929 /* main.m */; };
 		03A8A485141C79A600C45929 /* NightPulseAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A8A484141C79A600C45929 /* NightPulseAppDelegate.m */; };
 		03A8A488141C79A600C45929 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A8A486141C79A600C45929 /* MainWindow.xib */; };
-		03A8A48B141C79A600C45929 /* ExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03A8A48A141C79A600C45929 /* ExploreViewController.m */; };
-		03A8A491141C79A600C45929 /* ExploreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03A8A48F141C79A600C45929 /* ExploreViewController.xib */; };
 		03A8A49C141C79A600C45929 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A8A49B141C79A600C45929 /* SenTestingKit.framework */; };
 		03A8A49D141C79A600C45929 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A8A474141C79A600C45929 /* UIKit.framework */; };
 		03A8A49E141C79A600C45929 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03A8A476141C79A600C45929 /* Foundation.framework */; };
@@ -175,9 +171,6 @@
 		0392017F142EE6C900A06595 /* NearbyVenueTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyVenueTableCell.h; sourceTree = "<group>"; };
 		03920180142EE6C900A06595 /* NearbyVenueTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyVenueTableCell.m; sourceTree = "<group>"; };
 		0392A8F9143AA7F300F0E307 /* NightPulseNavBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NightPulseNavBar.png; sourceTree = "<group>"; };
-		0392A905143AAC9D00F0E307 /* ExploreTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExploreTableCell.h; sourceTree = "<group>"; };
-		0392A906143AAC9D00F0E307 /* ExploreTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExploreTableCell.m; sourceTree = "<group>"; };
-		0392A907143AAC9D00F0E307 /* ExploreTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExploreTableCell.xib; sourceTree = "<group>"; };
 		03A8A470141C79A600C45929 /* NightPulse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NightPulse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03A8A474141C79A600C45929 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		03A8A476141C79A600C45929 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -189,9 +182,6 @@
 		03A8A483141C79A600C45929 /* NightPulseAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NightPulseAppDelegate.h; sourceTree = "<group>"; };
 		03A8A484141C79A600C45929 /* NightPulseAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NightPulseAppDelegate.m; sourceTree = "<group>"; };
 		03A8A487141C79A600C45929 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		03A8A489141C79A600C45929 /* ExploreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExploreViewController.h; sourceTree = "<group>"; };
-		03A8A48A141C79A600C45929 /* ExploreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExploreViewController.m; sourceTree = "<group>"; };
-		03A8A490141C79A600C45929 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ExploreViewController.xib; sourceTree = "<group>"; };
 		03A8A49A141C79A600C45929 /* NightPulseTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NightPulseTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03A8A49B141C79A600C45929 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		03A8A4A4141C79A600C45929 /* NightPulseTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NightPulseTests-Info.plist"; sourceTree = "<group>"; };
@@ -478,12 +468,6 @@
 				9E022D311608EE2100771BBB /* NearbyViewController.h */,
 				9E022D321608EE2200771BBB /* NearbyViewController.m */,
 				9E022D331608EE2200771BBB /* NearbyViewController.xib */,
-				03A8A489141C79A600C45929 /* ExploreViewController.h */,
-				03A8A48A141C79A600C45929 /* ExploreViewController.m */,
-				03A8A48F141C79A600C45929 /* ExploreViewController.xib */,
-				0392A905143AAC9D00F0E307 /* ExploreTableCell.h */,
-				0392A906143AAC9D00F0E307 /* ExploreTableCell.m */,
-				0392A907143AAC9D00F0E307 /* ExploreTableCell.xib */,
 				9E80083F1619507F003E9B16 /* NPAnnotation.h */,
 				9E8008401619507F003E9B16 /* NPAnnotation.m */,
 				9E935F68161387E600503191 /* PulseAnnotation.h */,
@@ -832,13 +816,11 @@
 			files = (
 				03A8A47F141C79A600C45929 /* InfoPlist.strings in Resources */,
 				03A8A488141C79A600C45929 /* MainWindow.xib in Resources */,
-				03A8A491141C79A600C45929 /* ExploreViewController.xib in Resources */,
 				03A8A4B8141C7B6300C45929 /* CheckInViewController.xib in Resources */,
 				03D3D37114254020008916BC /* PulseRootViewController.xib in Resources */,
 				0313013C142C481A00367E8C /* Entitlements.entitlements in Resources */,
 				0392017E142EE0F300A06595 /* NearbyVenueTableCell.xib in Resources */,
 				0392A8FA143AA7F300F0E307 /* NightPulseNavBar.png in Resources */,
-				0392A909143AAC9D00F0E307 /* ExploreTableCell.xib in Resources */,
 				0346A844144E54A9009E8E06 /* btn_sendpulse.png in Resources */,
 				9E10B58415EF578100CC001F /* POIViewController.xib in Resources */,
 				9E10B65D15F019A100CC001F /* location.png in Resources */,
@@ -928,7 +910,6 @@
 				03AAEE8E14C5092800F179E6 /* JSONKit.h in Sources */,
 				03A8A481141C79A600C45929 /* main.m in Sources */,
 				03A8A485141C79A600C45929 /* NightPulseAppDelegate.m in Sources */,
-				03A8A48B141C79A600C45929 /* ExploreViewController.m in Sources */,
 				03A8A4B7141C7B6300C45929 /* CheckInViewController.m in Sources */,
 				03D3D36F14253D79008916BC /* PulseRootViewController.m in Sources */,
 				03D3D3A214254AE4008916BC /* ASIAuthenticationDialog.m in Sources */,
@@ -946,7 +927,6 @@
 				03130134142C30DA00367E8C /* Venue.m in Sources */,
 				03130137142C388800367E8C /* CheckIn.m in Sources */,
 				03920181142EE6C900A06595 /* NearbyVenueTableCell.m in Sources */,
-				0392A908143AAC9D00F0E307 /* ExploreTableCell.m in Sources */,
 				031316D91443DDD5000CC1B2 /* Location.m in Sources */,
 				0333B0691443E5C90045FF96 /* CurrentVenueCache.m in Sources */,
 				03DB2AA414451E3A00C234A5 /* LocationFinder.m in Sources */,
@@ -1006,14 +986,6 @@
 				03A8A487141C79A600C45929 /* en */,
 			);
 			name = MainWindow.xib;
-			sourceTree = "<group>";
-		};
-		03A8A48F141C79A600C45929 /* ExploreViewController.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				03A8A490141C79A600C45929 /* en */,
-			);
-			name = ExploreViewController.xib;
 			sourceTree = "<group>";
 		};
 		03A8A4A5141C79A600C45929 /* InfoPlist.strings */ = {
