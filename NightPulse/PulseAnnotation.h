@@ -9,9 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 #import <Parse/Parse.h>
-#import "NPAnnotation.h"
+#import "ParseLocationAnnotation.h"
 
-@interface PulseAnnotation : NPAnnotation
+@interface PulseAnnotation : ParseLocationAnnotation
 
 @property (nonatomic, readonly, strong) PFUser *user;
 

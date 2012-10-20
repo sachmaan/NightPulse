@@ -84,8 +84,6 @@
 		9E10B66415F01E3800CC001F /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10B66215F01E3600CC001F /* CameraViewController.m */; };
 		9E10B66515F01E3800CC001F /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E10B66315F01E3700CC001F /* CameraViewController.xib */; };
 		9E10B66815F01EB500CC001F /* CaptureSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10B66715F01EB400CC001F /* CaptureSessionManager.m */; };
-		9E203E55161DF95900416C46 /* ParseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E203E4F161DF95900416C46 /* ParseHelper.m */; };
-		9E203E56161DF95900416C46 /* ParseUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E203E51161DF95900416C46 /* ParseUserInfo.m */; };
 		9E6EAB7415F0230000B630B5 /* btn_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAB7315F0230000B630B5 /* btn_camera.png */; };
 		9E6EAB7715F026DD00B630B5 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6EAB7615F026DD00B630B5 /* CoreVideo.framework */; };
 		9E6EAB7915F026E000B630B5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6EAB7815F026E000B630B5 /* CoreMedia.framework */; };
@@ -119,12 +117,14 @@
 		9E80083A16194CBF003E9B16 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E80083816194CBF003E9B16 /* pin.png */; };
 		9E80083B16194CBF003E9B16 /* pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E80083916194CBF003E9B16 /* pin@2x.png */; };
 		9E80083E16194E5E003E9B16 /* VenueAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E80083D16194E5E003E9B16 /* VenueAnnotation.m */; };
-		9E8008411619507F003E9B16 /* NPAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8008401619507F003E9B16 /* NPAnnotation.m */; };
 		9E86801516011C5100911485 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E86801416011C5000911485 /* Crashlytics.framework */; };
 		9E935F171613792500503191 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E935F161613792500503191 /* Parse.framework */; };
 		9E935F6116137FA800503191 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E935F6016137FA800503191 /* libsqlite3.dylib */; };
 		9E935F6316137FBA00503191 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E935F6216137FBA00503191 /* StoreKit.framework */; };
 		9E935F6A161387E600503191 /* PulseAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E935F69161387E600503191 /* PulseAnnotation.m */; };
+		9ECAB405162F1DF30041E8F7 /* ParseHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAB3FD162F1DF30041E8F7 /* ParseHelper.m */; };
+		9ECAB406162F1DF30041E8F7 /* ParseLocationAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAB3FF162F1DF30041E8F7 /* ParseLocationAnnotation.m */; };
+		9ECAB407162F1DF30041E8F7 /* ParseUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 9ECAB401162F1DF30041E8F7 /* ParseUserInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -261,11 +261,6 @@
 		9E10B66315F01E3700CC001F /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
 		9E10B66615F01EB300CC001F /* CaptureSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureSessionManager.h; sourceTree = "<group>"; };
 		9E10B66715F01EB400CC001F /* CaptureSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureSessionManager.m; sourceTree = "<group>"; };
-		9E203E4E161DF95900416C46 /* ParseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseHelper.h; sourceTree = "<group>"; };
-		9E203E4F161DF95900416C46 /* ParseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseHelper.m; sourceTree = "<group>"; };
-		9E203E50161DF95900416C46 /* ParseUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseUserInfo.h; sourceTree = "<group>"; };
-		9E203E51161DF95900416C46 /* ParseUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseUserInfo.m; sourceTree = "<group>"; };
-		9E203E54161DF95900416C46 /* PFObjectFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFObjectFactory.h; sourceTree = "<group>"; };
 		9E6EAB7315F0230000B630B5 /* btn_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_camera.png; sourceTree = "<group>"; };
 		9E6EAB7615F026DD00B630B5 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		9E6EAB7815F026E000B630B5 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -299,14 +294,19 @@
 		9E80083916194CBF003E9B16 /* pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pin@2x.png"; path = "Images/pin@2x.png"; sourceTree = "<group>"; };
 		9E80083C16194E5E003E9B16 /* VenueAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueAnnotation.h; sourceTree = "<group>"; };
 		9E80083D16194E5E003E9B16 /* VenueAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueAnnotation.m; sourceTree = "<group>"; };
-		9E80083F1619507F003E9B16 /* NPAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPAnnotation.h; sourceTree = "<group>"; };
-		9E8008401619507F003E9B16 /* NPAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPAnnotation.m; sourceTree = "<group>"; };
 		9E86801416011C5000911485 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		9E935F161613792500503191 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		9E935F6016137FA800503191 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		9E935F6216137FBA00503191 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		9E935F68161387E600503191 /* PulseAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseAnnotation.h; sourceTree = "<group>"; };
 		9E935F69161387E600503191 /* PulseAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulseAnnotation.m; sourceTree = "<group>"; };
+		9ECAB3FC162F1DF30041E8F7 /* ParseHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseHelper.h; sourceTree = "<group>"; };
+		9ECAB3FD162F1DF30041E8F7 /* ParseHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseHelper.m; sourceTree = "<group>"; };
+		9ECAB3FE162F1DF30041E8F7 /* ParseLocationAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseLocationAnnotation.h; sourceTree = "<group>"; };
+		9ECAB3FF162F1DF30041E8F7 /* ParseLocationAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseLocationAnnotation.m; sourceTree = "<group>"; };
+		9ECAB400162F1DF30041E8F7 /* ParseUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseUserInfo.h; sourceTree = "<group>"; };
+		9ECAB401162F1DF30041E8F7 /* ParseUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseUserInfo.m; sourceTree = "<group>"; };
+		9ECAB404162F1DF30041E8F7 /* PFObjectFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PFObjectFactory.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -466,8 +466,6 @@
 				0392A905143AAC9D00F0E307 /* ExploreTableCell.h */,
 				0392A906143AAC9D00F0E307 /* ExploreTableCell.m */,
 				0392A907143AAC9D00F0E307 /* ExploreTableCell.xib */,
-				9E80083F1619507F003E9B16 /* NPAnnotation.h */,
-				9E8008401619507F003E9B16 /* NPAnnotation.m */,
 				9E935F68161387E600503191 /* PulseAnnotation.h */,
 				9E935F69161387E600503191 /* PulseAnnotation.m */,
 				9E80083C16194E5E003E9B16 /* VenueAnnotation.h */,
@@ -585,7 +583,7 @@
 		03D3D36B14253805008916BC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				9E203E4D161DF95900416C46 /* ParseHelperLibrary */,
+				9ECAB3FB162F1DF20041E8F7 /* ParseHelperLibrary */,
 				03FE24841606D5B300CA2C39 /* UIImage-Categories */,
 				9E10B57E15EF576200CC001F /* POI */,
 				0346A83C144E464E009E8E06 /* Tab */,
@@ -731,16 +729,19 @@
 			name = POI;
 			sourceTree = "<group>";
 		};
-		9E203E4D161DF95900416C46 /* ParseHelperLibrary */ = {
+		9ECAB3FB162F1DF20041E8F7 /* ParseHelperLibrary */ = {
 			isa = PBXGroup;
 			children = (
-				9E203E4E161DF95900416C46 /* ParseHelper.h */,
-				9E203E4F161DF95900416C46 /* ParseHelper.m */,
-				9E203E50161DF95900416C46 /* ParseUserInfo.h */,
-				9E203E51161DF95900416C46 /* ParseUserInfo.m */,
-				9E203E54161DF95900416C46 /* PFObjectFactory.h */,
+				9ECAB3FC162F1DF30041E8F7 /* ParseHelper.h */,
+				9ECAB3FD162F1DF30041E8F7 /* ParseHelper.m */,
+				9ECAB3FE162F1DF30041E8F7 /* ParseLocationAnnotation.h */,
+				9ECAB3FF162F1DF30041E8F7 /* ParseLocationAnnotation.m */,
+				9ECAB400162F1DF30041E8F7 /* ParseUserInfo.h */,
+				9ECAB401162F1DF30041E8F7 /* ParseUserInfo.m */,
+				9ECAB404162F1DF30041E8F7 /* PFObjectFactory.h */,
 			);
-			path = ParseHelperLibrary;
+			name = ParseHelperLibrary;
+			path = ../../ParseHelperLibrary;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -948,9 +949,9 @@
 				9E022D341608EE2200771BBB /* NearbyViewController.m in Sources */,
 				9E935F6A161387E600503191 /* PulseAnnotation.m in Sources */,
 				9E80083E16194E5E003E9B16 /* VenueAnnotation.m in Sources */,
-				9E8008411619507F003E9B16 /* NPAnnotation.m in Sources */,
-				9E203E55161DF95900416C46 /* ParseHelper.m in Sources */,
-				9E203E56161DF95900416C46 /* ParseUserInfo.m in Sources */,
+				9ECAB405162F1DF30041E8F7 /* ParseHelper.m in Sources */,
+				9ECAB406162F1DF30041E8F7 /* ParseLocationAnnotation.m in Sources */,
+				9ECAB407162F1DF30041E8F7 /* ParseUserInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

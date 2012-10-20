@@ -220,6 +220,19 @@
         
         // display POIview
     }
+    else if ([annotation isKindOfClass:[VenueAnnotation class]]) {
+        VenueAnnotation * v = (VenueAnnotation*)annotation;
+        Venue * venue = v.venue;
+        
+        POIViewController * poi = [[POIViewController alloc] init];
+        [poi setVenue:venue];
+        //[self.navigationController pushViewController:poi animated:YES];
+        UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:poi];
+        [self presentModalViewController:nav animated:YES];
+        UIBarButtonItem * closeButton = [[UIBarButtonItem alloc] initWithTitle:@"Close" style:UIBarButtonItemStylePlain target:self action:@selector(dismissModalViewControllerAnimated:)];
+        [poi.navigationItem setLeftBarButtonItem:closeButton];
+        [closeButton release];
+    }
 }
 /*
 -(void) recenterPlacemark {

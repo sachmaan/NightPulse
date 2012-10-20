@@ -11,7 +11,7 @@
 #import "Venue.h"
 #import <Parse/Parse.h>
 
-@interface CheckIn : NSObject //<PFObjectFactory>
+@interface CheckIn : NSObject <PFObjectFactory>
 
 @property(nonatomic, retain) NSString *userId;
 @property(nonatomic, retain) Venue *venue;
