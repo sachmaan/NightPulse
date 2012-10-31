@@ -11,7 +11,6 @@
 #import "JSONKit.h"
 #import "NearbyVenueTableCell.h"
 #import "NightPulseAppDelegate.h"
-#import "NightPulseAppDelegate.h"
 
 //#import "TempController.h"
 @interface PulseRootViewController ()
@@ -74,7 +73,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self 
                                              selector:@selector(updateNearbyVenues) 
-                                                 name:@"notification_didGetVenues" 
+                                                 name:kNotificationReceivedVenues
                                                object:nil];
     
 }
@@ -85,7 +84,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self refresh:nil];
+    //[self refresh:nil];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -103,7 +102,6 @@
 }
 
 - (void)refresh:(NSString *)searchTerm {
-//    [delegate refreshVenues:searchTerm];
     [((NightPulseAppDelegate *)[UIApplication sharedApplication].delegate) refreshVenues:nil];
 }
 
@@ -270,6 +268,7 @@
     
     CheckInViewController *checkInViewController = [[CheckInViewController alloc] init];
     checkInViewController.checkIn.userId = @"bobo";
+    checkInViewController.checkIn.pulseImage = image;
     NSLog(@"indexPath: %@ venue: %@", currentVenueIndexPath, [self getVenue:currentVenueIndexPath]);
     [checkInViewController setVenue:[self getVenue:currentVenueIndexPath]];
     [checkInViewController setDelegate:self];

@@ -6,11 +6,10 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "Location.h"
-
-@protocol LocationFinderDelegate <NSObject>
-
-- (void)onLocation:(Location *)location;
-
-@end
+//#import <Foundation/Foundation.h>
+//
+//@protocol LocationFinderDelegate <NSObject>
+//
+//- (void)onLocation:(CLLocation *)location;
+//
+//@end

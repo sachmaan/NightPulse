@@ -7,24 +7,25 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Location.h"
+#import <CoreLocation/CoreLocation.h>
 #import "NearestVenueLookup.h"
 #import "NearestVenueResultDelegate.h"
 #import "LocationFinderDelegate.h"
 
-@interface CurrentVenueCache : NSObject <NearestVenueLookup, NearestVenueResultDelegate, LocationFinderDelegate> {
-    Location *location;
+@interface CurrentVenueCache : NSObject <NearestVenueResultDelegate> {
+    CLLocation *location;
     NSMutableArray *venues;
-    NSMutableArray *venueListEventDelegates;
+//    NSMutableArray *venueListEventDelegates;
     NSOperationQueue *operationQueue;
-    id <NearestVenueResultDelegate> delegate;
+//    id <NearestVenueResultDelegate> delegate;
 }
 
 + (CurrentVenueCache *)getCache;
 
-- (void)registerDelegate:(id <NearestVenueResultDelegate>)delegate;
+//- (void)registerDelegate:(id <NearestVenueResultDelegate>)delegate;
 
-- (NSMutableArray *)getCurrentVenues;
+//- (NSMutableArray *)getCurrentVenues;
 
+- (void)submitVenueSearchRequest:(CLLocation *)location;
 
 @end
