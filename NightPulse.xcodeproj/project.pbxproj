@@ -72,6 +72,10 @@
 		03FE248E1606D5D000CA2C39 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FE248B1606D5D000CA2C39 /* UIImage+RoundedCorner.m */; };
 		03FE24941606D69500CA2C39 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 03FE24931606D69500CA2C39 /* Default.png */; };
 		03FE24961606D6A000CA2C39 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03FE24951606D6A000CA2C39 /* Default@2x.png */; };
+		9E01DAB11641917900F78C51 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E01DAB01641917900F78C51 /* Parse.framework */; };
+		9E01DAB31641917E00F78C51 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E01DAB21641917E00F78C51 /* Social.framework */; };
+		9E01DAB51641918200F78C51 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E01DAB41641918200F78C51 /* Accounts.framework */; };
+		9E01DAB71641918800F78C51 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E01DAB61641918800F78C51 /* AdSupport.framework */; };
 		9E022D341608EE2200771BBB /* NearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E022D321608EE2200771BBB /* NearbyViewController.m */; };
 		9E022D351608EE2200771BBB /* NearbyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E022D331608EE2200771BBB /* NearbyViewController.xib */; };
 		9E10B58315EF578100CC001F /* POIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10B58115EF578100CC001F /* POIViewController.m */; };
@@ -121,7 +125,6 @@
 		9E80083E16194E5E003E9B16 /* VenueAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E80083D16194E5E003E9B16 /* VenueAnnotation.m */; };
 		9E8008411619507F003E9B16 /* NPAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8008401619507F003E9B16 /* NPAnnotation.m */; };
 		9E86801516011C5100911485 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E86801416011C5000911485 /* Crashlytics.framework */; };
-		9E935F171613792500503191 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E935F161613792500503191 /* Parse.framework */; };
 		9E935F6116137FA800503191 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E935F6016137FA800503191 /* libsqlite3.dylib */; };
 		9E935F6316137FBA00503191 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E935F6216137FBA00503191 /* StoreKit.framework */; };
 		9E935F6A161387E600503191 /* PulseAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E935F69161387E600503191 /* PulseAnnotation.m */; };
@@ -243,6 +246,10 @@
 		03FE248B1606D5D000CA2C39 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
 		03FE24931606D69500CA2C39 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		03FE24951606D6A000CA2C39 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		9E01DAB01641917900F78C51 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		9E01DAB21641917E00F78C51 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		9E01DAB41641918200F78C51 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		9E01DAB61641918800F78C51 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		9E022D311608EE2100771BBB /* NearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyViewController.h; sourceTree = "<group>"; };
 		9E022D321608EE2200771BBB /* NearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyViewController.m; sourceTree = "<group>"; };
 		9E022D331608EE2200771BBB /* NearbyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyViewController.xib; sourceTree = "<group>"; };
@@ -302,7 +309,6 @@
 		9E80083F1619507F003E9B16 /* NPAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NPAnnotation.h; sourceTree = "<group>"; };
 		9E8008401619507F003E9B16 /* NPAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NPAnnotation.m; sourceTree = "<group>"; };
 		9E86801416011C5000911485 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
-		9E935F161613792500503191 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		9E935F6016137FA800503191 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		9E935F6216137FBA00503191 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		9E935F68161387E600503191 /* PulseAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseAnnotation.h; sourceTree = "<group>"; };
@@ -314,6 +320,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E01DAB71641918800F78C51 /* AdSupport.framework in Frameworks */,
+				9E01DAB51641918200F78C51 /* Accounts.framework in Frameworks */,
+				9E01DAB31641917E00F78C51 /* Social.framework in Frameworks */,
 				9E935F6316137FBA00503191 /* StoreKit.framework in Frameworks */,
 				9E935F6116137FA800503191 /* libsqlite3.dylib in Frameworks */,
 				9E6EAB7E15F027ED00B630B5 /* ImageIO.framework in Frameworks */,
@@ -334,7 +343,7 @@
 				03A8A477141C79A600C45929 /* Foundation.framework in Frameworks */,
 				03A8A479141C79A600C45929 /* CoreGraphics.framework in Frameworks */,
 				9E86801516011C5100911485 /* Crashlytics.framework in Frameworks */,
-				9E935F171613792500503191 /* Parse.framework in Frameworks */,
+				9E01DAB11641917900F78C51 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +488,9 @@
 		03A8A465141C79A500C45929 = {
 			isa = PBXGroup;
 			children = (
+				9E01DAB61641918800F78C51 /* AdSupport.framework */,
+				9E01DAB41641918200F78C51 /* Accounts.framework */,
+				9E01DAB21641917E00F78C51 /* Social.framework */,
 				03867386160914080082EC90 /* Andala.gpx */,
 				03FE24951606D6A000CA2C39 /* Default@2x.png */,
 				03FE24931606D69500CA2C39 /* Default.png */,
@@ -504,6 +516,7 @@
 		03A8A473141C79A600C45929 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9E01DAB01641917900F78C51 /* Parse.framework */,
 				0313012F142C2CC500367E8C /* Security.framework */,
 				0313012D142C2CB000367E8C /* AudioToolbox.framework */,
 				03C3344D142ABAC000E5E2AB /* CoreData.framework */,
@@ -521,7 +534,6 @@
 				031316CB1443DA12000CC1B2 /* libz.1.2.5.dylib */,
 				9E935F6216137FBA00503191 /* StoreKit.framework */,
 				9E935F6016137FA800503191 /* libsqlite3.dylib */,
-				9E935F161613792500503191 /* Parse.framework */,
 				03A8A474141C79A600C45929 /* UIKit.framework */,
 				03A8A476141C79A600C45929 /* Foundation.framework */,
 				03A8A478141C79A600C45929 /* CoreGraphics.framework */,
