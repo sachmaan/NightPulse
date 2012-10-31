@@ -20,8 +20,6 @@
 		0346A842144E46AD009E8E06 /* PulseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0346A841144E46AD009E8E06 /* PulseTabBarController.m */; };
 		0346A844144E54A9009E8E06 /* btn_sendpulse.png in Resources */ = {isa = PBXBuildFile; fileRef = 0346A843144E54A9009E8E06 /* btn_sendpulse.png */; };
 		03867387160914080082EC90 /* Andala.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 03867386160914080082EC90 /* Andala.gpx */; };
-		038F55A41620BC82002CC6BD /* FeedTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038F559F1620BC82002CC6BD /* FeedTableCell.xib */; };
-		038F55A61620BC82002CC6BD /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038F55A21620BC82002CC6BD /* FeedViewController.xib */; };
 		0392017E142EE0F300A06595 /* NearbyVenueTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0392017D142EE0F300A06595 /* NearbyVenueTableCell.xib */; };
 		03920181142EE6C900A06595 /* NearbyVenueTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03920180142EE6C900A06595 /* NearbyVenueTableCell.m */; };
 		0392A8FA143AA7F300F0E307 /* NightPulseNavBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 0392A8F9143AA7F300F0E307 /* NightPulseNavBar.png */; };
@@ -84,6 +82,10 @@
 		9E630E16164199FF00369631 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E630E15164199FF00369631 /* AdSupport.framework */; };
 		9E630E1816419A0B00369631 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E630E1716419A0B00369631 /* Accounts.framework */; };
 		9E630E2B1641A03B00369631 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E630E2A1641A03B00369631 /* Parse.framework */; };
+		9E630E401641A28000369631 /* FeedTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E630E3B1641A28000369631 /* FeedTableCell.m */; };
+		9E630E411641A28000369631 /* FeedTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E630E3C1641A28000369631 /* FeedTableCell.xib */; };
+		9E630E421641A28000369631 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E630E3E1641A28000369631 /* FeedViewController.m */; };
+		9E630E431641A28000369631 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E630E3F1641A28000369631 /* FeedViewController.xib */; };
 		9E6EAB7415F0230000B630B5 /* btn_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAB7315F0230000B630B5 /* btn_camera.png */; };
 		9E6EAB7715F026DD00B630B5 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6EAB7615F026DD00B630B5 /* CoreVideo.framework */; };
 		9E6EAB7915F026E000B630B5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6EAB7815F026E000B630B5 /* CoreMedia.framework */; };
@@ -162,8 +164,6 @@
 		0346A841144E46AD009E8E06 /* PulseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PulseTabBarController.m; sourceTree = "<group>"; };
 		0346A843144E54A9009E8E06 /* btn_sendpulse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_sendpulse.png; sourceTree = "<group>"; };
 		03867386160914080082EC90 /* Andala.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = Andala.gpx; sourceTree = "<group>"; };
-		038F559F1620BC82002CC6BD /* FeedTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedTableCell.xib; sourceTree = "<group>"; };
-		038F55A21620BC82002CC6BD /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
 		0392017D142EE0F300A06595 /* NearbyVenueTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyVenueTableCell.xib; sourceTree = "<group>"; };
 		0392017F142EE6C900A06595 /* NearbyVenueTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyVenueTableCell.h; sourceTree = "<group>"; };
 		03920180142EE6C900A06595 /* NearbyVenueTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyVenueTableCell.m; sourceTree = "<group>"; };
@@ -257,6 +257,12 @@
 		9E630E15164199FF00369631 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		9E630E1716419A0B00369631 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		9E630E2A1641A03B00369631 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		9E630E3A1641A28000369631 /* FeedTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableCell.h; sourceTree = "<group>"; };
+		9E630E3B1641A28000369631 /* FeedTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableCell.m; sourceTree = "<group>"; };
+		9E630E3C1641A28000369631 /* FeedTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedTableCell.xib; sourceTree = "<group>"; };
+		9E630E3D1641A28000369631 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		9E630E3E1641A28000369631 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		9E630E3F1641A28000369631 /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
 		9E6EAB7315F0230000B630B5 /* btn_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_camera.png; sourceTree = "<group>"; };
 		9E6EAB7615F026DD00B630B5 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		9E6EAB7815F026E000B630B5 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -577,6 +583,7 @@
 		03D3D36B14253805008916BC /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9E630E381641A27900369631 /* FeedView */,
 				9ECAB3FB162F1DF20041E8F7 /* ParseHelperLibrary */,
 				03FE24841606D5B300CA2C39 /* UIImage-Categories */,
 				9E10B57E15EF576200CC001F /* POI */,
@@ -721,6 +728,19 @@
 			name = POI;
 			sourceTree = "<group>";
 		};
+		9E630E381641A27900369631 /* FeedView */ = {
+			isa = PBXGroup;
+			children = (
+				9E630E3A1641A28000369631 /* FeedTableCell.h */,
+				9E630E3B1641A28000369631 /* FeedTableCell.m */,
+				9E630E3C1641A28000369631 /* FeedTableCell.xib */,
+				9E630E3D1641A28000369631 /* FeedViewController.h */,
+				9E630E3E1641A28000369631 /* FeedViewController.m */,
+				9E630E3F1641A28000369631 /* FeedViewController.xib */,
+			);
+			name = FeedView;
+			sourceTree = "<group>";
+		};
 		9ECAB3FB162F1DF20041E8F7 /* ParseHelperLibrary */ = {
 			isa = PBXGroup;
 			children = (
@@ -849,8 +869,8 @@
 				9E80083316194C84003E9B16 /* slider.png in Resources */,
 				9E80083A16194CBF003E9B16 /* pin.png in Resources */,
 				9E80083B16194CBF003E9B16 /* pin@2x.png in Resources */,
-				038F55A41620BC82002CC6BD /* FeedTableCell.xib in Resources */,
-				038F55A61620BC82002CC6BD /* FeedViewController.xib in Resources */,
+				9E630E411641A28000369631 /* FeedTableCell.xib in Resources */,
+				9E630E431641A28000369631 /* FeedViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -940,6 +960,8 @@
 				9ECAB405162F1DF30041E8F7 /* ParseHelper.m in Sources */,
 				9ECAB406162F1DF30041E8F7 /* ParseLocationAnnotation.m in Sources */,
 				9ECAB407162F1DF30041E8F7 /* ParseUserInfo.m in Sources */,
+				9E630E401641A28000369631 /* FeedTableCell.m in Sources */,
+				9E630E421641A28000369631 /* FeedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
