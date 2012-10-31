@@ -19,17 +19,16 @@
 
 -(id)initWithVenue:(Venue *)_venue {
     [self setVenue:_venue];
-    NSString * title = [venue name];
-    NSString * subtitle = @"";
     CLLocationCoordinate2D coord = venue.location.coordinate;
-    return [super initWithCoordinate:coord andTitle:title andSubtitle:subtitle];
+    return [super initWithCoordinate:coord];
 }
 
-- (BOOL)equalTo:(NPAnnotation *) anot {
+- (BOOL)equalTo:(ParseLocationAnnotation *) anot {
     VenueAnnotation * va = (VenueAnnotation*) anot;
     if (![va.venue.name isEqualToString:self.venue.name] ||
         ![va.venue.location isEqual:self.venue.location])
         return NO;
     return [super equalTo:anot];
 }
+
 @end

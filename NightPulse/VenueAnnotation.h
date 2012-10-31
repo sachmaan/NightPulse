@@ -11,9 +11,9 @@
 #import <Parse/Parse.h>
 #import "PulseAnnotation.h"
 #import "Venue.h"
-#import "NPAnnotation.h"
+#import "ParseLocationAnnotation.h"
 
-@interface VenueAnnotation : NPAnnotation //NSObject <MKAnnotation>
+@interface VenueAnnotation : ParseLocationAnnotation //NSObject <MKAnnotation>
 
 @property (nonatomic, readonly, strong) Venue * venue;
 
