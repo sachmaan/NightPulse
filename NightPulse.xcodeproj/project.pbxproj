@@ -66,10 +66,6 @@
 		03FE248E1606D5D000CA2C39 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 03FE248B1606D5D000CA2C39 /* UIImage+RoundedCorner.m */; };
 		03FE24941606D69500CA2C39 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 03FE24931606D69500CA2C39 /* Default.png */; };
 		03FE24961606D6A000CA2C39 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 03FE24951606D6A000CA2C39 /* Default@2x.png */; };
-		9E01DAB11641917900F78C51 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E01DAB01641917900F78C51 /* Parse.framework */; };
-		9E01DAB31641917E00F78C51 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E01DAB21641917E00F78C51 /* Social.framework */; };
-		9E01DAB51641918200F78C51 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E01DAB41641918200F78C51 /* Accounts.framework */; };
-		9E01DAB71641918800F78C51 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E01DAB61641918800F78C51 /* AdSupport.framework */; };
 		9E022D341608EE2200771BBB /* NearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E022D321608EE2200771BBB /* NearbyViewController.m */; };
 		9E022D351608EE2200771BBB /* NearbyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E022D331608EE2200771BBB /* NearbyViewController.xib */; };
 		9E10B58315EF578100CC001F /* POIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10B58115EF578100CC001F /* POIViewController.m */; };
@@ -85,11 +81,11 @@
 		9E630E14164199FC00369631 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E630E13164199FC00369631 /* Social.framework */; };
 		9E630E16164199FF00369631 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E630E15164199FF00369631 /* AdSupport.framework */; };
 		9E630E1816419A0B00369631 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E630E1716419A0B00369631 /* Accounts.framework */; };
-		9E630E2B1641A03B00369631 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E630E2A1641A03B00369631 /* Parse.framework */; };
 		9E630E401641A28000369631 /* FeedTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E630E3B1641A28000369631 /* FeedTableCell.m */; };
 		9E630E411641A28000369631 /* FeedTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E630E3C1641A28000369631 /* FeedTableCell.xib */; };
 		9E630E421641A28000369631 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E630E3E1641A28000369631 /* FeedViewController.m */; };
 		9E630E431641A28000369631 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E630E3F1641A28000369631 /* FeedViewController.xib */; };
+		9E630E4E1641A49300369631 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E630E4D1641A49300369631 /* Parse.framework */; };
 		9E6EAB7415F0230000B630B5 /* btn_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAB7315F0230000B630B5 /* btn_camera.png */; };
 		9E6EAB7715F026DD00B630B5 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6EAB7615F026DD00B630B5 /* CoreVideo.framework */; };
 		9E6EAB7915F026E000B630B5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6EAB7815F026E000B630B5 /* CoreMedia.framework */; };
@@ -239,10 +235,6 @@
 		03FE248B1606D5D000CA2C39 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RoundedCorner.m"; sourceTree = "<group>"; };
 		03FE24931606D69500CA2C39 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		03FE24951606D6A000CA2C39 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		9E01DAB01641917900F78C51 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		9E01DAB21641917E00F78C51 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		9E01DAB41641918200F78C51 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		9E01DAB61641918800F78C51 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		9E022D311608EE2100771BBB /* NearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyViewController.h; sourceTree = "<group>"; };
 		9E022D321608EE2200771BBB /* NearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyViewController.m; sourceTree = "<group>"; };
 		9E022D331608EE2200771BBB /* NearbyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearbyViewController.xib; sourceTree = "<group>"; };
@@ -264,13 +256,13 @@
 		9E630E13164199FC00369631 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		9E630E15164199FF00369631 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		9E630E1716419A0B00369631 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
-		9E630E2A1641A03B00369631 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		9E630E3A1641A28000369631 /* FeedTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableCell.h; sourceTree = "<group>"; };
 		9E630E3B1641A28000369631 /* FeedTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableCell.m; sourceTree = "<group>"; };
 		9E630E3C1641A28000369631 /* FeedTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedTableCell.xib; sourceTree = "<group>"; };
 		9E630E3D1641A28000369631 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		9E630E3E1641A28000369631 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		9E630E3F1641A28000369631 /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
+		9E630E4D1641A49300369631 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		9E6EAB7315F0230000B630B5 /* btn_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_camera.png; sourceTree = "<group>"; };
 		9E6EAB7615F026DD00B630B5 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		9E6EAB7815F026E000B630B5 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -346,7 +338,7 @@
 				03A8A477141C79A600C45929 /* Foundation.framework in Frameworks */,
 				03A8A479141C79A600C45929 /* CoreGraphics.framework in Frameworks */,
 				9E86801516011C5100911485 /* Crashlytics.framework in Frameworks */,
-				9E630E2B1641A03B00369631 /* Parse.framework in Frameworks */,
+				9E630E4E1641A49300369631 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,7 +503,7 @@
 		03A8A473141C79A600C45929 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9E630E2A1641A03B00369631 /* Parse.framework */,
+				9E630E4D1641A49300369631 /* Parse.framework */,
 				0313012F142C2CC500367E8C /* Security.framework */,
 				0313012D142C2CB000367E8C /* AudioToolbox.framework */,
 				03C3344D142ABAC000E5E2AB /* CoreData.framework */,
