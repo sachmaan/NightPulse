@@ -8,6 +8,8 @@
 
 #import "POIViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import "ParseHelper.h"
+#import "CheckIn.h"
 
 @interface POIViewController ()
 
@@ -71,6 +73,37 @@
     [imageView setBackgroundColor:[UIColor blackColor]];
     [imageView.layer setBorderWidth:3];
     [imageView.layer setBorderColor:[[UIColor whiteColor] CGColor]];
+    
+    [self queryForCheckIns];
+}
+
+-(void)queryForCheckIns {
+    NSString * venueID = venue.venueId;
+    PFCachePolicy policy = kPFCachePolicyCacheThenNetwork;
+    PFQuery * query = [PFQuery queryWithClassName:@"CheckIn"];
+    [query setCachePolicy:policy];
+    
+    
+    // todo: limit displayed/queried by age
+    NSDate * timestampLimit = [[NSDate date] dateByAddingTimeInterval:(-3600*3)]; // 3 hours
+    
+    // todo: cache venue pulses and only update if necessary
+    [query whereKey:@"venueId" equalTo:venueID];
+    [query orderByDescending:@"createdAt"];
+    //[query whereKey:@"createdAt" greaterThan:timestampLimit];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            NSLog(@"Found %d checkins at venue!", [objects count]);
+            if ([objects count] > 0) {
+                // display venue information
+                PFObject * p = [objects objectAtIndex:0];
+                CheckIn * checkIn = [[CheckIn alloc] initWithPFObject:p];
+                // todo: display checkIn photo
+            }
+        }
+        else
+            NSLog(@"QueryForCheckIns resulted in error %@", [error description]);
+    }];
 }
 
 @end

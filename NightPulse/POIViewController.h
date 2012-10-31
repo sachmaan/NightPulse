@@ -25,5 +25,5 @@
 
 @property (nonatomic, retain) Venue * venue;
 @property (nonatomic, retain) UIImage * venueImage;
--(void)initWithVenue:(Venue*)venue;
+//-(void)initWithVenue:(Venue*)venue;
 @end

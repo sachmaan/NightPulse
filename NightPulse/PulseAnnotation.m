@@ -23,7 +23,7 @@
     return [super initWithPFObject:anObject];
 }
 
-- (BOOL)equalTo:(NPAnnotation *) anot {
+- (BOOL)equalTo:(ParseLocationAnnotation *) anot {
     if ([[[(PulseAnnotation*)anot user] username] isEqualToString:self.user.username])
         return YES;
     
