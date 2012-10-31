@@ -84,6 +84,10 @@
 		9E10B66415F01E3800CC001F /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10B66215F01E3600CC001F /* CameraViewController.m */; };
 		9E10B66515F01E3800CC001F /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E10B66315F01E3700CC001F /* CameraViewController.xib */; };
 		9E10B66815F01EB500CC001F /* CaptureSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10B66715F01EB400CC001F /* CaptureSessionManager.m */; };
+		9E630E12164199E200369631 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E630E11164199E200369631 /* Parse.framework */; };
+		9E630E14164199FC00369631 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E630E13164199FC00369631 /* Social.framework */; };
+		9E630E16164199FF00369631 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E630E15164199FF00369631 /* AdSupport.framework */; };
+		9E630E1816419A0B00369631 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E630E1716419A0B00369631 /* Accounts.framework */; };
 		9E6EAB7415F0230000B630B5 /* btn_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E6EAB7315F0230000B630B5 /* btn_camera.png */; };
 		9E6EAB7715F026DD00B630B5 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6EAB7615F026DD00B630B5 /* CoreVideo.framework */; };
 		9E6EAB7915F026E000B630B5 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E6EAB7815F026E000B630B5 /* CoreMedia.framework */; };
@@ -118,7 +122,6 @@
 		9E80083B16194CBF003E9B16 /* pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9E80083916194CBF003E9B16 /* pin@2x.png */; };
 		9E80083E16194E5E003E9B16 /* VenueAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E80083D16194E5E003E9B16 /* VenueAnnotation.m */; };
 		9E86801516011C5100911485 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E86801416011C5000911485 /* Crashlytics.framework */; };
-		9E935F171613792500503191 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E935F161613792500503191 /* Parse.framework */; };
 		9E935F6116137FA800503191 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E935F6016137FA800503191 /* libsqlite3.dylib */; };
 		9E935F6316137FBA00503191 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E935F6216137FBA00503191 /* StoreKit.framework */; };
 		9E935F6A161387E600503191 /* PulseAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E935F69161387E600503191 /* PulseAnnotation.m */; };
@@ -261,6 +264,10 @@
 		9E10B66315F01E3700CC001F /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
 		9E10B66615F01EB300CC001F /* CaptureSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureSessionManager.h; sourceTree = "<group>"; };
 		9E10B66715F01EB400CC001F /* CaptureSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureSessionManager.m; sourceTree = "<group>"; };
+		9E630E11164199E200369631 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		9E630E13164199FC00369631 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		9E630E15164199FF00369631 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		9E630E1716419A0B00369631 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		9E6EAB7315F0230000B630B5 /* btn_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_camera.png; sourceTree = "<group>"; };
 		9E6EAB7615F026DD00B630B5 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		9E6EAB7815F026E000B630B5 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
@@ -295,7 +302,6 @@
 		9E80083C16194E5E003E9B16 /* VenueAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VenueAnnotation.h; sourceTree = "<group>"; };
 		9E80083D16194E5E003E9B16 /* VenueAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VenueAnnotation.m; sourceTree = "<group>"; };
 		9E86801416011C5000911485 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
-		9E935F161613792500503191 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		9E935F6016137FA800503191 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		9E935F6216137FBA00503191 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		9E935F68161387E600503191 /* PulseAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PulseAnnotation.h; sourceTree = "<group>"; };
@@ -314,6 +320,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E630E1816419A0B00369631 /* Accounts.framework in Frameworks */,
+				9E630E16164199FF00369631 /* AdSupport.framework in Frameworks */,
+				9E630E14164199FC00369631 /* Social.framework in Frameworks */,
 				9E935F6316137FBA00503191 /* StoreKit.framework in Frameworks */,
 				9E935F6116137FA800503191 /* libsqlite3.dylib in Frameworks */,
 				9E6EAB7E15F027ED00B630B5 /* ImageIO.framework in Frameworks */,
@@ -334,7 +343,7 @@
 				03A8A477141C79A600C45929 /* Foundation.framework in Frameworks */,
 				03A8A479141C79A600C45929 /* CoreGraphics.framework in Frameworks */,
 				9E86801516011C5100911485 /* Crashlytics.framework in Frameworks */,
-				9E935F171613792500503191 /* Parse.framework in Frameworks */,
+				9E630E12164199E200369631 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,6 +486,9 @@
 		03A8A465141C79A500C45929 = {
 			isa = PBXGroup;
 			children = (
+				9E630E1716419A0B00369631 /* Accounts.framework */,
+				9E630E15164199FF00369631 /* AdSupport.framework */,
+				9E630E13164199FC00369631 /* Social.framework */,
 				03867386160914080082EC90 /* Andala.gpx */,
 				03FE24951606D6A000CA2C39 /* Default@2x.png */,
 				03FE24931606D69500CA2C39 /* Default.png */,
@@ -502,6 +514,7 @@
 		03A8A473141C79A600C45929 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9E630E11164199E200369631 /* Parse.framework */,
 				0313012F142C2CC500367E8C /* Security.framework */,
 				0313012D142C2CB000367E8C /* AudioToolbox.framework */,
 				03C3344D142ABAC000E5E2AB /* CoreData.framework */,
@@ -519,7 +532,6 @@
 				031316CB1443DA12000CC1B2 /* libz.1.2.5.dylib */,
 				9E935F6216137FBA00503191 /* StoreKit.framework */,
 				9E935F6016137FA800503191 /* libsqlite3.dylib */,
-				9E935F161613792500503191 /* Parse.framework */,
 				03A8A474141C79A600C45929 /* UIKit.framework */,
 				03A8A476141C79A600C45929 /* Foundation.framework */,
 				03A8A478141C79A600C45929 /* CoreGraphics.framework */,
