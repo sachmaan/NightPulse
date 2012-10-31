@@ -11,7 +11,7 @@
 #import "NearestVenueResultDelegate.h"
 #import "LocationFinderDelegate.h"
 
-@interface VenueSearch : NSObject <LocationFinderDelegate> {
+@interface VenueSearch : NSObject {
     NSMutableArray *venues;
     NSMutableArray *venueListEventDelegates;
     NSOperationQueue *operationQueue;

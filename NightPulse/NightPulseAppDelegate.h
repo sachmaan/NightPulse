@@ -11,22 +11,29 @@
 #import "NearestVenueResultDelegate.h"
 #import "CurrentVenueCache.h"
 #import "VenueSearch.h"
+#import "CoreLocation/CoreLocation.h"
 
 static NSString * const kNotificationPulseSent = @"kNotificationPulseSent";
 static NSString * const kNotificationDidGetLocation = @"kNotificationDidGetLocation";
-@interface NightPulseAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate, UINavigationControllerDelegate, NearestVenueResultDelegate>
+static NSString * const kNotificationReceivedVenues = @"kNotificationReceivedVenues";
+
+@interface NightPulseAppDelegate : NSObject <UIApplicationDelegate, UITabBarControllerDelegate, UINavigationControllerDelegate,CLLocationManagerDelegate> {
+    CLLocationManager *locationManager;
+}
 
 @property(nonatomic, retain) IBOutlet UIWindow *window;
 
 // views for root controller
 @property(nonatomic, retain) IBOutlet UITabBarController *tabBarController;
-@property(nonatomic, retain) IBOutlet UINavigationController * navController;
+@property(nonatomic, retain) IBOutlet UINavigationController *navController;
 
 @property(nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @property(nonatomic, retain) NSManagedObjectModel *managedObjectModel;
 
 @property(nonatomic, retain) NSPersistentStoreCoordinator *peristentStoreCoordinator;
+
+@property(nonatomic, retain) CLLocation *location;
 
 // venue and search
 @property(nonatomic, retain) NSMutableArray *venues;

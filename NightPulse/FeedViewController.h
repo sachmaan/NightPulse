@@ -1,13 +1,21 @@
 //
-//  SecondViewController.h
+//  FeedViewController.h
 //  NightPulse
 //
-//  Created by Sachin Nene on 9/11/11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Created by Sachin Nene on 10/4/12.
+//
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import "ParseHelper.h"
 
-@interface FeedViewController : UIViewController
+
+@interface FeedViewController : UITableViewController {
+    NSMutableArray *pulses;
+}
+
+
+
 
 @end

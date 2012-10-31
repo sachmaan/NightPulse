@@ -51,16 +51,13 @@
         self.checkIn.crowdRatio = [NSNumber numberWithInt:50];
         self.checkIn.lineRatio = [NSNumber numberWithInt:50];
                                    
-        DebugLog(@"CheckIn obj created =%@", self.checkIn);
+        //DebugLog(@"CheckIn obj created =%@", self.checkIn);
     }
     return self;
 }
 
 -(void)setVenue:(Venue *)venue {
     self.checkIn.venue = venue;
-    self.checkIn.pfGeoPoint = [PFGeoPoint geoPointWithLatitude:self.checkIn.venue.location.coordinate.latitude longitude:self.checkIn.venue.location.coordinate.longitude];
-    
-    DebugLog(@"Checkin has venue: %@ %@", self.checkIn.venue, self.checkIn.venue.location);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -71,9 +68,6 @@
 }
 
 #pragma mark - View lifecycle
-
-
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];

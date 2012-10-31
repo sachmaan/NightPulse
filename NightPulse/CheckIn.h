@@ -19,9 +19,10 @@
 @property(nonatomic, retain) NSNumber *crowdRatio;
 @property(nonatomic, retain) NSNumber *lineRatio;
 @property(nonatomic, retain) NSNumber *coverCharge;
-@property(nonatomic, retain) PFGeoPoint * pfGeoPoint; // used for easy querying
 @property(nonatomic) NSTimeInterval age;
+@property(nonatomic, retain) UIImage *pulseImage;
 
 - (PFObject *)toPFObject;
+- (id)fromPFObject:(PFObject *)pObject;
 
 @end

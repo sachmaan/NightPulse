@@ -10,15 +10,7 @@
 #import "PulseRootViewController.h"
 #import <Crashlytics/Crashlytics.h>
 #import "NearbyViewController.h"
-//@implementation UINavigationBar (CustomImage)
-//- (void)drawRect:(CGRect)rect
-//{
-//    UIImage *image = [UIImage imageNamed: @"NightPulseNavBar.png"];
-//    DebugLog(@"Nav bar image found = %@", image);
-//    [image drawInRect:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-//    [image release];
-//}
-//@end
+#import "LocationFinder.h"
 
 @implementation NightPulseAppDelegate
 
@@ -34,31 +26,29 @@
 @synthesize venueSearch;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
+    
+    locationManager = [[CLLocationManager alloc] init];
+    [locationManager setDelegate:self];
+    [locationManager setDistanceFilter:kCLDistanceFilterNone];
+    [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
+    [self refreshLocation];
+    
     // venue data
     currentVenueCache = [CurrentVenueCache getCache];
-    [currentVenueCache registerDelegate:self];
+//    [currentVenueCache registerDelegate:self];
     venueSearch = [[VenueSearch alloc] init];
     
     // Override point for customization after application launch.
     // Add the tab bar controller's current view as a subview of the window
     self.window.rootViewController = self.tabBarController;
-    
-    // use nav controller instead
-    /*
-    PulseRootViewController * pulseRootViewController = [[PulseRootViewController alloc] init];
-    self.navController = [[UINavigationController alloc] initWithRootViewController:pulseRootViewController];
-    NearbyViewController * nearbyViewController = [[NearbyViewController alloc] init];
-//    self.navController = [[UINavigationController alloc] initWithRootViewController:nearbyViewController];
-    [self.navController.navigationBar setBarStyle:UIBarStyleBlack];
-    self.window.rootViewController = self.navController;
-     */
     [self.window makeKeyAndVisible];
 
     [Crashlytics startWithAPIKey:@"747b4305662b69b595ac36f88f9c2abe54885ba3"];
     
     return YES;
 }
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     /*
@@ -100,34 +90,14 @@
 
     [_window release];
     [_tabBarController release];
+    [locationManager release];
     [super dealloc];
 }
-
-
-/*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
-{
-}
-*/
-
-/*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
-{
-}
-*/
 
 #pragma mark LocationHelper
 
 - (void)refreshVenues:(NSString *)searchTerm {
-    
-    DebugLog(@"Calling refresh");
-    if (nil == searchTerm) {
-        [currentVenueCache findNearestVenues:self];
-    } else {
-        [venueSearch searchForSpecificVenuesNearby:self searchTerm:searchTerm];
-    }
+    [self refreshLocation];
 }
 
 -(NSArray*)getVenues {
@@ -141,15 +111,32 @@
         [venues release];
     venues = venues_;
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"notification_didGetVenues" object:self userInfo:nil];    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationReceivedVenues object:self userInfo:nil];
 }
 
 - (void)onNearestVenueSearchResult:(NSMutableArray *)venues_ {
-    DebugLog(@"calling onNearestVenueSearchResult");
-    venues = venues_;
-
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"notification_didGetVenues" object:self userInfo:nil];
+//    DebugLog(@"calling onNearestVenueSearchResult");
+//    venues = venues_;
+//
+//    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationReceivedVenues object:self userInfo:nil];
 }
 
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    DebugLog(@"Received Location");
+    [locationManager stopUpdatingLocation];
+    
+    [newLocation retain];
+    if (nil != self.location)
+        [self.location release];   
+    
+    self.location = newLocation;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:kNotificationDidGetLocation object:self userInfo:nil];
+    [currentVenueCache submitVenueSearchRequest:self.location];
+}
+
+- (void) refreshLocation {
+    [locationManager startUpdatingLocation];
+}
 
 @end

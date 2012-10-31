@@ -17,7 +17,7 @@
 @synthesize lineRatio;
 @synthesize coverCharge;
 @synthesize age;
-@synthesize pfGeoPoint;
+@synthesize pulseImage;
 
 - (id)init {
     self = [super init];
@@ -28,6 +28,14 @@
         self.age = 0;
     }
 
+    return self;
+}
+
+-(id)initWithPFObject:(PFObject *)object {
+    self = [super init];
+    if (self) {
+        self = [self fromPFObject:object];
+    }
     return self;
 }
 
@@ -44,7 +52,15 @@
     [venueCheckIn setObject:self.crowdRatio forKey:@"crowd"];
     [venueCheckIn setObject:self.lineRatio forKey:@"line"];
     [venueCheckIn setObject:self.coverCharge forKey:@"cover"];
-    [venueCheckIn setObject:self.pfGeoPoint forKey:@"pfGeoPoint"];
+    
+    PFGeoPoint *geoPoint = [PFGeoPoint geoPointWithLatitude:self.venue.location.coordinate.latitude longitude:self.venue.location.coordinate.longitude];
+    
+    [venueCheckIn setObject:geoPoint forKey:@"pfGeoPoint"];
+    
+    NSData *imageData = UIImageJPEGRepresentation(self.pulseImage, 0.05f);
+    PFFile *imageFile = [PFFile fileWithName:@"photo.jpg" data:imageData];
+    
+    [venueCheckIn setObject:imageFile forKey:@"photo"];
 
     return venueCheckIn;
 }
@@ -60,7 +76,19 @@
     self.lineRatio = [pObject objectForKey:@"line"];
     self.coverCharge = [pObject objectForKey:@"cover"];
 
-    self.pfGeoPoint = [pObject objectForKey:@"pfGeoPoint"];
+    
+    PFGeoPoint *pfGeoPoint = [pObject objectForKey:@"pfGeoPoint"];
+    self.venue.location = [[CLLocation alloc] initWithLatitude:pfGeoPoint.latitude longitude:pfGeoPoint.longitude];
+    
+    PFFile *image = [pObject objectForKey:@"photo"];
+    
+    if (image != nil) {
+        NSData *imageData = [image getData];     
+        self.pulseImage = [UIImage imageWithData:imageData];
+    } else {
+        self.pulseImage = [UIImage imageNamed:@"tab_pulse"];
+    }
+    
     return self;
 }
 

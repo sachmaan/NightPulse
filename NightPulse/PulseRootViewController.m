@@ -11,7 +11,6 @@
 #import "JSONKit.h"
 #import "NearbyVenueTableCell.h"
 #import "NightPulseAppDelegate.h"
-#import "NightPulseAppDelegate.h"
 
 //#import "TempController.h"
 @interface PulseRootViewController ()
@@ -74,7 +73,7 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self 
                                              selector:@selector(updateNearbyVenues) 
-                                                 name:@"notification_didGetVenues" 
+                                                 name:kNotificationReceivedVenues
                                                object:nil];
     
 }
@@ -85,7 +84,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [self refresh:nil];
+    //[self refresh:nil];
 }
 
 -(void)viewDidAppear:(BOOL)animated {
@@ -97,11 +96,12 @@
 - (Venue *)getVenue:(NSIndexPath *)indexPath {
     NightPulseAppDelegate * appDelegate = (NightPulseAppDelegate*)[UIApplication sharedApplication].delegate;
     NSArray * venues = [appDelegate getVenues];
-    return ((Venue *) [venues objectAtIndex:indexPath.row]);
+    int index = indexPath.row;
+    NSLog(@"Returning venue at index %d", index);
+    return ((Venue *) [venues objectAtIndex:index]);
 }
 
 - (void)refresh:(NSString *)searchTerm {
-//    [delegate refreshVenues:searchTerm];
     [((NightPulseAppDelegate *)[UIApplication sharedApplication].delegate) refreshVenues:nil];
 }
 
@@ -160,8 +160,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-
     [self setCurrentVenueIndexPath:indexPath];
+    NSLog(@"Selecting and saving index path: %@", indexPath);
     CameraViewController * camera = [[CameraViewController alloc] init];
     [camera setDelegate:self];
     //[self.navigationController pushViewController:camera animated:YES];
@@ -268,8 +268,9 @@
     
     CheckInViewController *checkInViewController = [[CheckInViewController alloc] init];
     checkInViewController.checkIn.userId = @"bobo";
+    checkInViewController.checkIn.pulseImage = image;
+    NSLog(@"indexPath: %@ venue: %@", currentVenueIndexPath, [self getVenue:currentVenueIndexPath]);
     [checkInViewController setVenue:[self getVenue:currentVenueIndexPath]];
-//    NSLog(@"Checkin venue: %@ at location %@", checkInViewController.checkIn.venue, checkInViewController.checkIn.venue.location);
     [checkInViewController setDelegate:self];
     [modalNav pushViewController:checkInViewController animated:YES];
     [checkInViewController release];

@@ -22,7 +22,7 @@
 
 @property (nonatomic, retain) IBOutlet UIScrollView * scrollView;
 @property (nonatomic, retain) IBOutlet MKMapView *_mapView;
-@property (nonatomic, retain) NSMutableArray *venues;
+@property (nonatomic, retain) NSMutableDictionary *venues;
 @property (nonatomic, retain) CurrentVenueCache *currentVenueCache;
 @property (nonatomic, retain) VenueSearch *venueSearch;
 @property (nonatomic, assign) BOOL isFirstUpdate;
