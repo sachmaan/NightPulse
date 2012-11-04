@@ -78,9 +78,9 @@
 		9E10B66415F01E3800CC001F /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10B66215F01E3600CC001F /* CameraViewController.m */; };
 		9E10B66515F01E3800CC001F /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E10B66315F01E3700CC001F /* CameraViewController.xib */; };
 		9E10B66815F01EB500CC001F /* CaptureSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E10B66715F01EB400CC001F /* CaptureSessionManager.m */; };
-		9E630E14164199FC00369631 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E630E13164199FC00369631 /* Social.framework */; };
-		9E630E16164199FF00369631 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E630E15164199FF00369631 /* AdSupport.framework */; };
-		9E630E1816419A0B00369631 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E630E1716419A0B00369631 /* Accounts.framework */; };
+		9E630E14164199FC00369631 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E630E13164199FC00369631 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9E630E16164199FF00369631 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E630E15164199FF00369631 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9E630E1816419A0B00369631 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E630E1716419A0B00369631 /* Accounts.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9E630E401641A28000369631 /* FeedTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E630E3B1641A28000369631 /* FeedTableCell.m */; };
 		9E630E411641A28000369631 /* FeedTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E630E3C1641A28000369631 /* FeedTableCell.xib */; };
 		9E630E421641A28000369631 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E630E3E1641A28000369631 /* FeedViewController.m */; };
@@ -1045,6 +1045,7 @@
 				GCC_PREFIX_HEADER = "NightPulse/NightPulse-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "NightPulse/NightPulse-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "B65F8AA8-75F3-44BB-97D2-B0FA86C91872";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1126,6 +1127,7 @@
 				GCC_PREFIX_HEADER = "NightPulse/NightPulse-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "NightPulse/NightPulse-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "B65F8AA8-75F3-44BB-97D2-B0FA86C91872";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1146,6 +1148,7 @@
 				GCC_PREFIX_HEADER = "NightPulse/NightPulse-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "NightPulse/NightPulse-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "B65F8AA8-75F3-44BB-97D2-B0FA86C91872";
 				TARGETED_DEVICE_FAMILY = 1;
